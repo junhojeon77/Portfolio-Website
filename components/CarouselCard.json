@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "github": "",
+    "website": "",
+    "title": "ML Training Platform",
+    "image": "/images/ml_platform.jpg",
+    "desc": "erer",
+    "tech": "qrqer"
+  },
+  {
+    "id": 2,
+    "github": "",
+    "website": "",
+    "title": "Portfolio Website Design",
+    "image": "/images/portfolio_design.jpg",
+    "desc": "",
+    "tech": ""
+  },
+  {
+    "id": 3,
+    "github": "",
+    "website": "",
+    "title": "E-commerce Branding Suite",
+    "image": "/images/ecomm_brand.jpg",
+    "desc": "",
+    "tech": ""
+  }
+]
