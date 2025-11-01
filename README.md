@@ -4,13 +4,13 @@ A modern and interactive portfolio website built with Next.js, React Bootstrap, 
 
 ## Features
 
-- 🎨 Modern and responsive design
-- 🌟 Interactive 3D elements using Three.js
-- ✨ Smooth animations and transitions
-- 💻 Project showcase section
-- 📱 Mobile-friendly layout
-- 🔄 Dynamic content loading
-- ⚡ Fast performance with Next.js
+-  Modern and responsive design
+-  Interactive 3D elements using Three.js
+-  Smooth animations and transitions
+-  Project showcase section
+-  Mobile-friendly layout
+-  Dynamic content loading
+-  Fast performance with Next.js
 
 ## Technologies Used
 
@@ -20,20 +20,6 @@ A modern and interactive portfolio website built with Next.js, React Bootstrap, 
 - **Animations**: React Typed
 - **Styling**: CSS/SCSS
 - **Icons**: React Icons
-
-my-portfolio/
-├── app/
-│ ├── globals.css
-│ ├── layout.tsx
-│ └── page.tsx
-├── components/
-│ ├── About.jsx
-│ ├── Hero.jsx
-│ ├── Hero3D.jsx
-│ ├── Projects.jsx
-│ └── ...
-├── public/
-└── styles/
 
 ## 🧾 License
 
