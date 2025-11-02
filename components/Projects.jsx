@@ -17,7 +17,7 @@ export default function Projects() {
       <section className="project-section" style={{ padding: "6rem 0" }}>
         <Container className="mt-5">
           <FadeInSection>
-            <h1 className="mb-5 mt-5"> / projects </h1>
+            <h1 className="mb-5 mt-5 fs-1"> / projects </h1>
           </FadeInSection>
           <FadeInSection>
             <Carousel className="d-none d-md-block">

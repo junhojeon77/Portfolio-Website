@@ -11,9 +11,9 @@ export default function Hero() {
   return (
     <>
       <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
-        <h3>Move me!</h3>
+        <h3 className="text-center fs-3 fs-md-2 fs-lg-1">Move me!</h3>
         <Hero3D />
-        <h2 className="text-center display-4 mt-2">
+        <h2 className="text-center mt-2 fs-1">
           <ReactTyped
             startWhenVisible
             strings={[
@@ -25,12 +25,12 @@ export default function Hero() {
           />
         </h2>
         <FadeInSection>
-          <h3 className="text-center hero-subtitle fs-2">
+          <h3 className="text-center hero-subtitle fs-3">
             i can create random stuff
           </h3>
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
-              <p className="mt-2">
+              <p className="mt-2 fs-6">
                 I’m a software engineer from South Korea/Toronto, fascinated by
                 the science of machine learning. I thrive on building, training,
                 and testing models that turn ideas into real-world solutions.

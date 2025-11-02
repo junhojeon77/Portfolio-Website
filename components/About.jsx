@@ -8,10 +8,10 @@ export default function About() {
         {/* Text Column */}
         <Col xs={12} md={7}>
           <FadeInSection>
-            <h1 className="mb-5">/ about me</h1>
+            <h1 className="mb-5 fs-1">/ about me</h1>
           </FadeInSection>
           <FadeInSection>
-            <p>
+            <p className="fs-6">
               I&apos;m a Freelance Software Developer specializing in{" "}
               <strong style={{ color: "red" }}>Data Science</strong>, and Web
               applications. Currently a Software Developer Student in the
