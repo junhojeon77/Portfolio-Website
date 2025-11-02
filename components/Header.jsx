@@ -81,7 +81,7 @@ export default function Header() {
               <FaGithub size={20} />
             </Nav.Link>
             <Nav.Link
-              href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+              href="https://www.linkedin.com/in/jun-ho-jeon-a08060252"
               target="_blank"
               rel="noopener noreferrer"
               className="fs-8"
