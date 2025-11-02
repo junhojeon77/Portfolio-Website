@@ -31,9 +31,9 @@ export default function Hero() {
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
               <p className="mt-2">
-                I’m a software engineer from South Korea, about the science of
-                machine learning and AI technologies, and I love exploring how
-                they can solve real-world problems.
+                I’m a software engineer from South Korea/Toronto, fascinated by
+                the science of machine learning. I thrive on building, training,
+                and testing models that turn ideas into real-world solutions.
               </p>
             </Col>
           </Row>
