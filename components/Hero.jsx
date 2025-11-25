@@ -37,7 +37,7 @@ export default function Hero() {
             </Col>
           </Row>
 
-          <Link href="mailto:junhojeon88@gmail.com">
+          <Link href="mailto:junhojeon88@gmail.com ">
             <Button
               className="self-center border border-green-400 rounded px-8 py-2  font-extrabold text-[22px] flex items-center gap-2 cursor-pointer bg-transparent mt-4 fade-up"
               variant=""
