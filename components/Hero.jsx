@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { FaEnvelope } from "react-icons/fa";
 import FadeInSection from "@/components/hooks/FadeInSection";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -35,13 +36,16 @@ export default function Hero() {
               </p>
             </Col>
           </Row>
-          <Button
-            className="self-center border border-green-400 rounded px-8 py-2  font-extrabold text-[22px] flex items-center gap-2 cursor-pointer bg-transparent mt-4 fade-up"
-            variant=""
-            size="lg"
-          >
-            <FaEnvelope className="mb-1" /> Email Me
-          </Button>
+
+          <Link href="mailto:junhojeon88@gmail.com">
+            <Button
+              className="self-center border border-green-400 rounded px-8 py-2  font-extrabold text-[22px] flex items-center gap-2 cursor-pointer bg-transparent mt-4 fade-up"
+              variant=""
+              size="lg"
+            >
+              <FaEnvelope className="mb-1" /> Email Me
+            </Button>
+          </Link>
         </FadeInSection>
       </Container>
     </>
