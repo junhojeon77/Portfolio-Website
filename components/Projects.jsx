@@ -20,39 +20,46 @@ export default function Projects() {
             <h1 className="mb-5 mt-5 fs-1"> / projects </h1>
           </FadeInSection>
           <FadeInSection>
-            <Carousel className="d-none d-md-block">
-              {carouseldata.map((carouseldata) => (
+            <Carousel className="carousel d-none d-md-block " interval={null}>
+              {carouseldata.map((item) => (
                 <Carousel.Item key={carouseldata.id}>
                   <img
                     className="d-block w-100"
-                    src={carouseldata.image}
-                    alt={carouseldata.title}
+                    src={item.image}
+                    alt={item.title}
                     style={{
-                      height: "500px",
+                      height: "600px",
+                      opacity: 0.9,
                       objectFit: "cover",
                     }}
                   />
+                  <Carousel.Caption className="caption-top-right">
+                    <h3 className="text-dark">{item.title}</h3>
+                    <p style={{ whiteSpace: "pre-line" }}>{item.desc}</p>
+                    <p className="text-danger">{item.tech}</p>
+                  </Carousel.Caption>
                   <Carousel.Caption>
-                    <h3 className="text-secondary">{carouseldata.title}</h3>
-                    <p>{carouseldata.desc}</p>
-                    <p className="text-danger">{carouseldata.tech}</p>
-
                     <a
-                      href={carouseldata.github}
+                      href={item.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn "
                     >
-                      <FaGithub size={27} />
+                      <FaGithub size={27} className="text-light" />
                     </a>
-                    <a
-                      href={carouseldata.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn "
-                    >
-                      <FaExternalLinkSquareAlt size={27} />
-                    </a>
+                    {item.website && (
+                      <a
+                        href={item.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn "
+                      >
+                        <FaExternalLinkSquareAlt
+                          size={27}
+                          className="text-light"
+                        />
+                      </a>
+                    )}
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}

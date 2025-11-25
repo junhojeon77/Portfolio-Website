@@ -7,7 +7,10 @@ import FadeInSection from "./hooks/FadeInSection";
 export default function ProjectCard({ project }) {
   return (
     <FadeInSection>
-      <Card className="project-item border-0 bg-black shadow-sm hover-animate">
+      <Card
+        className="project-item border-0 shadow-sm hover-animate"
+        style={{ backgroundColor: "rgb(128, 172, 255)" }}
+      >
         <div className="project-image">
           <Card.Img variant="top" src={project.image} alt={project.title} />
           <div className="project-overlay">

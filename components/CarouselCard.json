@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "github": "",
+    "github": "https://github.com/junhojeon77/EmotionDetector",
     "website": "",
-    "title": "ML Training Platform",
-    "image": "/images/ml_platform.jpg",
-    "desc": "erer",
-    "tech": "qrqer"
+    "title": "AI Emotion Detector",
+    "image": "/emotion-detect.png",
+    "desc": "Lightweight CNN-based facial emotion\n recognition using data from FER2013.",
+    "tech": "TensorFlow, Python"
   },
   {
     "id": 2,
