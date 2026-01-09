@@ -20,10 +20,10 @@
   {
     "id": 3,
     "github": "",
-    "website": "",
-    "title": "E-commerce Branding Suite",
+    "website": "https://gamingdeals-ca.vercel.app/",
+    "title": "Gaming Laptop Scraper w/ AI Recommendation",
     "image": "/images/ecomm_brand.jpg",
-    "desc": "",
+    "desc": "E-commerce website that\nscrapes gaming laptop data and provides AI-based recommendations in a chatbot.",
     "tech": ""
   }
 ]
