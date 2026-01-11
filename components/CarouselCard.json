@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 2,
     "github": "https://github.com/junhojeon77/EmotionDetector",
     "website": "",
     "title": "AI Emotion Detector",
@@ -9,12 +9,12 @@
     "tech": "TensorFlow, Python"
   },
   {
-    "id": 2,
+    "id": 1,
     "github": "",
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop AI Recommendor",
     "image": "/laptoppicker.png",
     "desc": "E-commerce website that\nscrapes gaming laptop data \nand provides AI-based recommendations in a chatbot.",
-    "tech": ""
+    "tech": "Next.js, Puppeteer, React"
   }
 ]
