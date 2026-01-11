@@ -3,7 +3,7 @@
     "id": 1,
     "github": "",
     "website": "",
-    "title": "AI Emotion Detector",
+    "title": "To be added",
 
     "image": "/images/ml_platform.jpg",
     "desc": "",
@@ -13,7 +13,7 @@
     "id": 2,
     "github": "",
     "website": "",
-    "title": "Portfolio Website Design",
+    "title": "To be added",
 
     "image": "/images/portfolio_design.jpg",
     "desc": "",
@@ -23,39 +23,9 @@
     "id": 3,
     "github": "",
     "website": "",
-    "title": "E-commerce Branding Suite",
+    "title": "To be added",
 
     "image": "/images/ecomm_brand.jpg",
-    "desc": "",
-    "tech": ""
-  },
-  {
-    "id": 4,
-    "github": "",
-    "website": "",
-    "title": "Efficient API Backend",
-
-    "image": "/images/api_backend.jpg",
-    "desc": "",
-    "tech": ""
-  },
-  {
-    "id": 5,
-    "github": "",
-    "website": "",
-    "title": "Corporate Rebranding",
-
-    "image": "/images/corp_rebrand.jpg",
-    "desc": "",
-    "tech": ""
-  },
-  {
-    "id": 6,
-    "github": "",
-    "website": "",
-    "title": "Data Visualization Dashboard",
-
-    "image": "/images/data_dashboard.jpg",
     "desc": "",
     "tech": ""
   }

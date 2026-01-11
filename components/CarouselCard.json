@@ -12,7 +12,7 @@
     "id": 2,
     "github": "",
     "website": "https://gamingdeals-ca.vercel.app/",
-    "title": "Gaming Laptop Scraper w/ AI Recommendation",
+    "title": "Gaming Laptop AI Recommendor",
     "image": "/laptoppicker.png",
     "desc": "E-commerce website that\nscrapes gaming laptop data \nand provides AI-based recommendations in a chatbot.",
     "tech": ""

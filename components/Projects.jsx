@@ -1,6 +1,6 @@
 // components/Projects.jsx
 "use client";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import projectsData from "../components/Projects.json";
 import CarouselData from "../components/CarouselCard.json";
@@ -34,9 +34,11 @@ export default function Projects() {
                     }}
                   />
                   <Carousel.Caption className="caption-top-right">
-                    <h3 className="text-dark">{item.title}</h3>
-                    <p style={{ whiteSpace: "pre-line" }}>{item.desc}</p>
-                    <p className="text-danger">{item.tech}</p>
+                    <Card style={{opacity: 0.9 , backgroundColor: "rgb(128, 172, 255)", padding: "1rem"}}>
+                      <h3 className="text-dark">{item.title}</h3>
+                      <p style={{ whiteSpace: "pre-line" }}>{item.desc}</p>
+                      <p className="text-danger">{item.tech}</p>
+                    </Card>
                   </Carousel.Caption>
                   <Carousel.Caption>
                     <a

@@ -13,8 +13,8 @@ export default function About() {
           <FadeInSection>
             <p className="fs-6">
               I&apos;m a Freelance Software Developer specializing in{" "}
-              <strong style={{ color: "red" }}>AI/ML</strong>, and Web
-              applications. Currently a Software Developer Student in the
+              <strong style={{ color: "red" }}>Full Stack Development</strong>, with an interest in AI/ML. 
+              Currently a Software Developer Student in the
               Computer Programming & Analysis at{" "}
               <strong style={{ color: "red" }}>Seneca Polytechnic</strong>.
             </p>
@@ -28,7 +28,7 @@ export default function About() {
                 <ul className="list-unstyled">
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> Typescript
+                    <span style={{ color: "red" }}>*</span> Node.js
                   </li>
                   <li>
                     {" "}
@@ -36,7 +36,7 @@ export default function About() {
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> Next.js{" "}
+                    <span style={{ color: "red" }}>*</span> TypeScript
                   </li>
                 </ul>
               </Col>
@@ -60,7 +60,7 @@ export default function About() {
           </FadeInSection>
           <FadeInSection>
             <p>
-              Outside of programming, I play a lot of Sports. I also play a lot
+              Outside of programming, I play a lot of Sports (mostly baseketball). I also play a lot
               of video games.
             </p>
           </FadeInSection>
