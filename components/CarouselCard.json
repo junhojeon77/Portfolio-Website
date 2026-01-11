@@ -14,7 +14,7 @@
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop AI Recommendor",
     "image": "/laptoppicker.png",
-    "desc": "E-commerce website that\nscrapes gaming laptop data \nand provides AI-based recommendations in a chatbot.",
+    "desc": "Simple Website that\nscrapes gaming laptop data \nand provides AI-based recommendations in a chatbot.",
     "tech": "Next.js, Puppeteer, React"
   }
 ]
