@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "github": "",
-    "website": "",
-    "title": "To be added",
+    "github": "https://github.com/junhojeon77/Web422-A3-FrontEnd",
+    "website": "https://web422-a3-front-end.vercel.app/",
+    "title": "Book Finder Platform",
 
-    "image": "/images/ml_platform.jpg",
-    "desc": "",
-    "tech": ""
+    "image": "/book_finder.png",
+    "desc": "A platform for finding books from openlibrary.org \nwith user authentication and book management features.",
+    "tech": "React, Next.js, React-Bootstrap"
   },
   {
     "id": 2,
@@ -21,12 +21,11 @@
   },
   {
     "id": 3,
-    "github": "",
-    "website": "",
-    "title": "To be added",
-
-    "image": "/images/ecomm_brand.jpg",
-    "desc": "",
-    "tech": ""
+    "github": "https://github.com/junhojeon77/Valentines-Day-Envelope-Animation",
+    "website": "https://junhojeon77.github.io/Valentines-Day-Envelope-Animation/",
+    "title": "Valentine's Day Envelope Animation",
+    "image": "/valentines_animation.png",
+    "desc": "Interactive Valentine's Day envelope animation using HTML, CSS, and JavaScript.",
+    "tech": "HTML, CSS, JavaScript"
   }
 ]

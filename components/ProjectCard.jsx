@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
         style={{ backgroundColor: "rgb(128, 172, 255)" }}
       >
         <div className="project-image">
-          <Card.Img variant="top" src={project.image} alt={project.title} />
+          <Card.Img className="" variant="top" src={project.image} alt={project.title} />
           <div className="project-overlay">
             <div className="d-flex justify-content-between align-items-center ms-3">
               <FaFolder size={25} />
@@ -29,10 +29,10 @@ export default function ProjectCard({ project }) {
             <Card.Body className="project-info">
               <Card.Title as="h3">{project.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-secondary">
-                {project.desc}sd
+                {project.desc}
               </Card.Subtitle>
               <Card.Subtitle className="mb-2 text-danger">
-                {project.tech}wdwd
+                {project.tech}
               </Card.Subtitle>
             </Card.Body>
           </div>

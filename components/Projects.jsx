@@ -20,7 +20,7 @@ export default function Projects() {
             <h1 className="mb-5 mt-5 fs-1"> / projects </h1>
           </FadeInSection>
           <FadeInSection>
-            <Carousel className="carousel d-none d-md-block " interval={null}>
+            <Carousel className="carousel d-none d-md-block ">
               {carouseldata.map((item) => (
                 <Carousel.Item key={carouseldata.id}>
                   <img
@@ -33,14 +33,13 @@ export default function Projects() {
                       objectFit: "cover",
                     }}
                   />
-                  <Carousel.Caption className="caption-top-right">
-                    <Card style={{opacity: 0.9 , backgroundColor: "rgb(128, 172, 255)", padding: "1rem"}}>
+                  <Carousel.Caption className="caption-top-left">
+                    <Card style={{opacity: 0.9 , backgroundColor: "rgb(128, 172, 255)", padding: "0.4rem"}}>
                       <h3 className="text-dark">{item.title}</h3>
                       <p style={{ whiteSpace: "pre-line" }}>{item.desc}</p>
                       <p className="text-danger">{item.tech}</p>
-                    </Card>
-                  </Carousel.Caption>
-                  <Carousel.Caption>
+                    
+                    <div>
                     <a
                       href={item.github}
                       target="_blank"
@@ -61,7 +60,10 @@ export default function Projects() {
                           className="text-light"
                         />
                       </a>
+                      
                     )}
+                    </div>
+                    </Card>
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}

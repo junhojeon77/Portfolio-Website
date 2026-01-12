@@ -72,11 +72,11 @@ code,
   transform: translateY(-10px);
 }
 
-.caption-top-right {
+.caption-top-left {
   position: absolute; /* override Bootstrap */
   top: 10px; /* move to top */
-  right: 10px; /* move to right */
-  left: auto; /* cancel Bootstrap's left positioning */
+  left: 10px; /* move to right */
+  right: auto; /* cancel Bootstrap's left positioning */
   bottom: auto; /* cancel Bootstrap's bottom positioning */
-  text-align: right; /* align text to the right */
+  text-align: left; /* align text to the right */
 }

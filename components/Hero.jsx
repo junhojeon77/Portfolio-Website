@@ -30,9 +30,9 @@ export default function Hero() {
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
               <p className="mt-3 fs-8 card-subtitle">
-                I’m a software engineer from South Korea/Toronto, fascinated by
-                the science of machine learning. I thrive on building, training,
-                and testing models that turn ideas into real-world solutions.
+                I’m a Freelance Full Stack Developer from South Korea/Toronto,
+                bridging web development with AI/ML. engineering scalable solutions
+                while actively training models for complex real-world problems.
               </p>
             </Col>
           </Row>
