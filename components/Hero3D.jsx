@@ -42,6 +42,7 @@ const Hero3D = () => {
     controls.dampingFactor = 0.05;
     controls.rotateSpeed = 0.5;
     controls.enableZoom = false;
+    controls.enablePan = false;
 
     const animate = () => {
       requestAnimationFrame(animate);
