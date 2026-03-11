@@ -39,7 +39,7 @@ export default function Projects() {
                       <p style={{ whiteSpace: "pre-line" }}>{item.desc}</p>
                       <p className="text-danger">{item.tech}</p>
                     
-                    <div>
+                    <div className="d-flex justify-content-center">
                     <a
                       href={item.github}
                       target="_blank"
