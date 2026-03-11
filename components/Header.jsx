@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <Navbar expand="lg" className="bg-[rgb(128,172,255)]" fixed="top">
+    <Navbar expand="lg" className="nav_collapse bg-[rgb(128,172,255)]" fixed="top">
       <Container>
         <Navbar.Brand href="#home" className="fs-6 ps-2">
           Jun Ho Jeon
