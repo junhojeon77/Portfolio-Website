@@ -80,3 +80,7 @@ code,
   bottom: auto; /* cancel Bootstrap's bottom positioning */
   text-align: left; /* align text to the right */
 }
+
+.nav_collapse {
+  background-color: rgb(128, 172, 255);
+}

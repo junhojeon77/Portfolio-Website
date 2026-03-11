@@ -27,7 +27,7 @@ export default function Header() {
         <Navbar.Toggle aria-controls="main-navbar" />
 
         {/* Navbar Links */}
-        <Navbar.Collapse id="main-navbar" className="bg-[rgb(128,172,255)] text-center">
+        <Navbar.Collapse id="main-navbar" className="nav_collapse text-center">
           <Nav className="mask-left">
             <Nav.Link
               className="fs-8"
