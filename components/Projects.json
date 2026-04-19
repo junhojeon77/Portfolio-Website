@@ -10,14 +10,13 @@
     "tech": "React, Next.js, React-Bootstrap"
   },
   {
-    "id": 2,
-    "github": "",
-    "website": "",
-    "title": "To be added",
-
-    "image": "/images/portfolio_design.jpg",
-    "desc": "",
-    "tech": ""
+  "id": 4,
+  "github": "https://github.com/junhojeon77/aip444/tree/main/assigments/assignment-02",
+  "website": "", 
+  "title": "AI Job Application Advisor",
+  "image": "/AIjobAdvisor.png",
+  "desc": "An AI-powered CLI tool that automates job application prep. It leverages OpenAI and Zod for strict JSON data extraction, analyzes market gaps, and uses agentic workflows to generate custom application strategies.",
+  "tech": "TypeScript, Node.js, OpenAI API, Zod"
   },
   {
     "id": 3,
