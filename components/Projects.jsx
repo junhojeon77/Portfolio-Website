@@ -22,7 +22,7 @@ export default function Projects() {
           <FadeInSection>
             <Carousel className="carousel d-none d-md-block ">
               {carouseldata.map((item) => (
-                <Carousel.Item key={carouseldata.id}>
+                <Carousel.Item key={item.id}>
                   <img
                     className="d-block w-100"
                     src={item.image}
