@@ -1,15 +1,15 @@
 [
   {
-    "id": 2,
-    "github": "https://github.com/junhojeon77/EmotionDetector",
-    "website": "",
-    "title": "AI Emotion Detector",
-    "image": "/emotion-detect.png",
-    "desc": "Lightweight CNN-based facial emotion\n recognition using data from FER2013.",
-    "tech": "TensorFlow, Python"
+    "id": 1,
+    "github": "",
+    "website": "https://job-match-gray.vercel.app/",
+    "title": "JobMatch",
+    "image": "/jobmatch.png",
+    "desc": "Full-stack AI job finder using OpenAI APIs \nand agentic workflows with real-time job-search,\nKV-backed rate limiting, and résumé parsing.",
+    "tech": "TypeScript, Next.js, OpenAI API, Zod"
   },
   {
-    "id": 1,
+    "id": 2,
     "github": "",
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop AI Recommendor",

@@ -4,19 +4,18 @@
     "github": "https://github.com/junhojeon77/Web422-A3-FrontEnd",
     "website": "https://web422-a3-front-end.vercel.app/",
     "title": "Book Finder Platform",
-
     "image": "/book_finder.png",
     "desc": "A platform for finding books from openlibrary.org \nwith user authentication and book management features.",
     "tech": "React, Next.js, React-Bootstrap"
   },
   {
-  "id": 4,
-  "github": "https://github.com/junhojeon77/aip444/tree/main/assigments/assignment-02",
-  "website": "", 
-  "title": "AI Job Application Advisor",
-  "image": "/AIjobAdvisor.png",
-  "desc": "An AI-powered CLI tool that automates job application prep. It leverages OpenAI and Zod for strict JSON data extraction, analyzes market gaps, and uses agentic workflows to generate custom application strategies.",
-  "tech": "TypeScript, Node.js, OpenAI API, Zod"
+    "id": 2,
+    "github": "https://github.com/junhojeon77/EmotionDetector",
+    "website": "",
+    "title": "AI Emotion Detector",
+    "image": "/emotion-detect.png",
+    "desc": "Lightweight CNN-based facial emotion\n recognition using data from FER2013.",
+    "tech": "TensorFlow, Python"
   },
   {
     "id": 3,
@@ -26,5 +25,14 @@
     "image": "/valentines_animation.png",
     "desc": "Interactive Valentine's Day envelope animation using HTML, CSS, and JavaScript.",
     "tech": "HTML, CSS, JavaScript"
+  },
+  {
+    "id": 5,
+    "github": "",
+    "website": "https://job-match-gray.vercel.app/",
+    "title": "JobMatch",
+    "image": "/jobmatch.png",
+    "desc": "Full-stack AI job finder using OpenAI APIs \nand agentic workflows with real-time job-search,\nKV-backed rate limiting, and résumé parsing.",
+    "tech": "TypeScript, Next.js, OpenAI API, Zod"
   }
 ]
