@@ -44,8 +44,9 @@ const Hero3D = () => {
     controls.enableZoom = false;
     controls.enablePan = false;
 
+    let frameId;
     const animate = () => {
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
       sphere.rotation.x += 0.001;
       sphere.rotation.y += 0.001;
       controls.update();
@@ -53,18 +54,12 @@ const Hero3D = () => {
     };
     animate();
 
-    // Simple resize handler - just maintain aspect ratio
-    const handleResize = () => {
-      camera.aspect = 1;
-      camera.updateProjectionMatrix();
-    };
-
-    window.addEventListener("resize", handleResize);
-
+    const mount = mountRef.current;
     return () => {
-      window.removeEventListener("resize", handleResize);
-      if (mountRef.current && renderer.domElement) {
-        mountRef.current.removeChild(renderer.domElement);
+      cancelAnimationFrame(frameId);
+      controls.dispose();
+      if (mount && renderer.domElement) {
+        mount.removeChild(renderer.domElement);
       }
       renderer.dispose();
     };

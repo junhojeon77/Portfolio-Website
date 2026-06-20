@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* offset anchored sections for the fixed navbar */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 body {
   background-color: var(--secondary-color);
   color: var(--text-color);

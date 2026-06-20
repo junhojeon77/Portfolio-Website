@@ -17,7 +17,7 @@ export default function Hero() {
         <h2 className="text-center mt-2 display-4">
           <ReactTyped
             startWhenVisible
-            strings={[` Hi,<span style="color:red;"> Jun</span> here</span>.`]}
+            strings={[` Hi,<span style="color:red;"> Jun</span> here.`]}
             typeSpeed={80}
             html={true}
             smartBackspace

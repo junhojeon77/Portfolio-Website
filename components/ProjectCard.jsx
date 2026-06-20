@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "react-bootstrap";
+import Image from "next/image";
 import { FaGithub, FaFolder, FaExternalLinkSquareAlt } from "react-icons/fa";
 import FadeInSection from "./hooks/FadeInSection";
 
@@ -12,7 +13,24 @@ export default function ProjectCard({ project }) {
         style={{ backgroundColor: "rgb(128, 172, 255)" }}
       >
         <div className="project-image">
-          <Card.Img className="" variant="top" src={project.image} alt={project.title} />
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "16 / 10",
+              overflow: "hidden",
+              borderTopLeftRadius: "var(--bs-card-inner-border-radius)",
+              borderTopRightRadius: "var(--bs-card-inner-border-radius)",
+            }}
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
           <div className="project-overlay">
             <div className="d-flex justify-content-between align-items-center ms-3">
               <FaFolder size={25} />

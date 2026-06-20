@@ -1,4 +1,5 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Image from "next/image";
 import FadeInSection from "./hooks/FadeInSection";
 
 export default function About() {
@@ -76,11 +77,12 @@ export default function About() {
         >
           <FadeInSection>
             <Image
-              src="/me.jpeg" // replace with your image path
+              src="/me.jpeg"
               alt="Profile"
-              className="mt-4 ms-5 "
-              rounded
-              fluid
+              width={800}
+              height={800}
+              className="mt-4 ms-5 rounded img-fluid"
+              style={{ width: "100%", height: "auto" }}
             />
           </FadeInSection>
         </Col>

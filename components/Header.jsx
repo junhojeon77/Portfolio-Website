@@ -6,16 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Header() {
-  const handleScrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <Navbar expand="lg" className="nav_collapse bg-[rgb(128,172,255)]" fixed="top">
       <Container>
@@ -29,35 +19,13 @@ export default function Header() {
         {/* Navbar Links */}
         <Navbar.Collapse id="main-navbar" className="nav_collapse text-center">
           <Nav className="mask-left">
-            <Nav.Link
-              className="fs-8"
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScrollTo("home");
-              }}
-            >
+            <Nav.Link className="fs-8" href="#home">
               Home
             </Nav.Link>
-            <Nav.Link
-              className="fs-8"
-              href="#about"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScrollTo("about");
-              }}
-            >
+            <Nav.Link className="fs-8" href="#about">
               About
             </Nav.Link>
-
-            <Nav.Link
-              className="fs-8"
-              href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScrollTo("projects");
-              }}
-            >
+            <Nav.Link className="fs-8" href="#projects">
               Projects
             </Nav.Link>
           </Nav>
