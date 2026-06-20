@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "github": "",
+    "github": "https://github.com/junhojeon77/job-match",
     "website": "https://job-match-gray.vercel.app/",
     "title": "JobMatch",
     "image": "/jobmatch.png",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "github": "",
+    "github": "https://github.com/junhojeon77/gaminglaptop-back",
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop AI Recommendor",
     "image": "/laptoppicker.png",

@@ -28,7 +28,7 @@
   },
   {
     "id": 5,
-    "github": "",
+    "github": "https://github.com/junhojeon77/job-match",
     "website": "https://job-match-gray.vercel.app/",
     "title": "JobMatch",
     "image": "/jobmatch.png",
