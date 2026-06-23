@@ -1,12 +1,12 @@
-[
+[ 
   {
     "id": 1,
-    "github": "https://github.com/junhojeon77/Web422-A3-FrontEnd",
-    "website": "https://web422-a3-front-end.vercel.app/",
-    "title": "Book Finder Platform",
-    "image": "/book_finder.png",
-    "desc": "A platform for finding books from openlibrary.org \nwith user authentication and book management features.",
-    "tech": "React, Next.js, React-Bootstrap"
+    "github": "", 
+    "website": "https://cafe-princess.vercel.app/",
+    "title": "Café Princess Digital Storefront",
+    "image": "/cafe_princess.png",
+    "desc": "A responsive digital storefront replacing physical menus, featuring a secure Supabase admin portal for real-time menu management and a zero-downtime static fallback.",
+    "tech": "React 18, TypeScript, Tailwind CSS, shadcn/ui, Supabase, Node.js"
   },
   {
     "id": 2,
