@@ -4,7 +4,7 @@
     "github": "", 
     "website": "https://cafe-princess.vercel.app/",
     "title": "Café Princess Digital Storefront",
-    "image": "/cafe-princess.png",
+    "image": "/cafe-princess.jpeg",
     "desc": "A responsive digital storefront replacing physical menus, featuring a secure Supabase admin portal for real-time menu management and a zero-downtime static fallback.",
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js"
   },
