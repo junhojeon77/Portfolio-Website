@@ -15,7 +15,7 @@ export default function About() {
             <p className="fs-6">
               I&apos;m a Freelance Software Developer specializing in{" "}
               <strong style={{ color: "red" }}>Full Stack Development</strong>, with an interest in AI/ML. 
-              Currently a Software Developer Student in the
+              Currently a Software Developer Student in my last year of
               Computer Programming & Analysis at{" "}
               <strong style={{ color: "red" }}>Seneca Polytechnic</strong>.
             </p>
@@ -33,7 +33,7 @@ export default function About() {
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> React.js
+                    <span style={{ color: "red" }}>*</span> React
                   </li>
                   <li>
                     {" "}
@@ -49,7 +49,7 @@ export default function About() {
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> Java
+                    <span style={{ color: "red" }}>*</span> Go
                   </li>
                   <li>
                     {" "}
