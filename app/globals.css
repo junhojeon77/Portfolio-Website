@@ -89,3 +89,58 @@ code,
 .nav_collapse {
   background-color: rgb(128, 172, 255);
 }
+
+/* "Available to work" status pill */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  backdrop-filter: blur(4px);
+}
+
+.availability-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.availability-dot-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffc107;
+  animation: availabilityBreathe 2.6s ease-in-out infinite;
+}
+
+@keyframes availabilityBreathe {
+  0%,
+  100% {
+    transform: scale(0.82);
+    opacity: 0.55;
+    box-shadow: 0 0 3px 1px rgba(255, 193, 7, 0.5);
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(255, 193, 7, 0.95);
+  }
+}
+
+/* Accessibility: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .availability-dot-inner {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
+import AvailabilityBadge from "./AvailabilityBadge";
 
 export default function Header() {
   return (
@@ -12,6 +13,8 @@ export default function Header() {
         <Navbar.Brand href="#home" className="fs-6 ps-2">
           Jun Ho Jeon
         </Navbar.Brand>
+
+        <AvailabilityBadge className="ms-2 me-auto" />
 
         {/* Toggle for mobile */}
         <Navbar.Toggle aria-controls="main-navbar" />
