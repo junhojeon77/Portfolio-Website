@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import FadeInSection from "./hooks/FadeInSection";
+import AvailabilityBadge from "./AvailabilityBadge";
 
 export default function About() {
   return (
@@ -9,7 +10,10 @@ export default function About() {
         {/* Text Column */}
         <Col xs={12} md={7}>
           <FadeInSection>
-            <h1 className="mb-5 fs-1">/ about</h1>
+            <h1 className="mb-3 fs-1">/ about</h1>
+          </FadeInSection>
+          <FadeInSection>
+            <AvailabilityBadge className="mb-4" />
           </FadeInSection>
           <FadeInSection>
             <p className="fs-6">
