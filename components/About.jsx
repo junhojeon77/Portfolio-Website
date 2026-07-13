@@ -69,20 +69,20 @@ export default function About() {
 
         {/* Image Column */}
 
-        <Col
-          xs={12}
-          md={6}
-          className="text-center mt-4 mt-md-0 d-none d-md-block"
-          style={{ width: "30%" }}
-        >
+        <Col xs={12} md={5} className="d-none d-md-block">
           <FadeInSection>
             <Image
-              src="/me.jpeg"
+              src="/junho.jpeg"
               alt="Profile"
               width={800}
-              height={800}
-              className="mt-4 ms-5 rounded img-fluid"
-              style={{ width: "100%", height: "auto" }}
+              height={1000}
+              className="rounded-4 shadow"
+              style={{
+                width: "100%",
+                height: "auto",
+                aspectRatio: "4 / 5",
+                objectFit: "cover",
+              }}
             />
           </FadeInSection>
         </Col>
