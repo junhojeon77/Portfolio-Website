@@ -13,6 +13,7 @@ export default function Header() {
           Jun Ho Jeon
         </Navbar.Brand>
 
+
         {/* Toggle for mobile */}
         <Navbar.Toggle aria-controls="main-navbar" />
 
