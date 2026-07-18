@@ -31,7 +31,7 @@ const Hero3D = () => {
 
     const geometry = new THREE.SphereGeometry(1.5, 20, 20);
     const material = new THREE.MeshBasicMaterial({
-      color: 0xff0000,
+      color: 0xb91c1c,
       wireframe: true,
     });
     const sphere = new THREE.Mesh(geometry, material);
@@ -68,7 +68,7 @@ const Hero3D = () => {
   return (
     <div
       ref={mountRef}
-      className="flex items-center justify-center mx-auto"
+      className="d-flex align-items-center justify-content-center mx-auto"
       style={{ width: "300px", height: "300px" }}
     />
   );

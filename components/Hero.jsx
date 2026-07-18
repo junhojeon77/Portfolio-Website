@@ -3,49 +3,45 @@
 import Hero3D from "@/components/Hero3D.jsx";
 import { ReactTyped } from "react-typed";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import { FaEnvelope } from "react-icons/fa";
 import FadeInSection from "@/components/hooks/FadeInSection";
-import Link from "next/link";
 
 export default function Hero() {
   return (
     <>
       <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
-        <h3 className="text-center fs-3 fs-md-2 fs-lg-1">Move me!</h3>
+        <p className="text-center fs-3">Move me!</p>
         <Hero3D />
-        <h2 className="text-center mt-2 display-4">
+        <h1 className="text-center mt-2 display-4">
           <ReactTyped
             startWhenVisible
-            strings={[` Hi,<span style="color:red;"> Jun</span> here.`]}
+            strings={[` Hi,<span class="accent"> Jun</span> here.`]}
             typeSpeed={80}
             html={true}
             smartBackspace
           />
-        </h2>
+        </h1>
         <FadeInSection>
-          <h3 className="text-center card-subtitle fs-3 mt-2">
+          <p className="text-center card-subtitle fs-3 mt-2">
             i can create random stuff
-          </h3>
+          </p>
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
-              <p className="mt-3 fs-8 card-subtitle">
-                I’m a Freelance Full Stack Developer from South Korea/Toronto,
-                bridging web development with AI/ML. engineering scalable solutions
-                while actively training models for complex real-world problems.
+              <p className="mt-3 fs-6 card-subtitle">
+                I&apos;m a Freelance Full Stack Developer from South
+                Korea/Toronto, bridging software development with AI/ML —
+                engineering scalable solutions while actively training models
+                for complex real-world problems.
               </p>
             </Col>
           </Row>
 
-          <Link href="mailto:junhojeon88@gmail.com">
-            <Button
-              className="self-center border border-green-400 rounded px-8 py-2  font-extrabold text-[22px] flex items-center gap-2 cursor-pointer bg-transparent mt-4 fade-up"
-              variant=""
-              size="lg"
-            >
-              <FaEnvelope className="mb-1" /> Email Me
-            </Button>
-          </Link>
+          <a
+            href="mailto:junhojeon88@gmail.com"
+            className="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2 mt-4 fade-up fw-bold"
+          >
+            <FaEnvelope aria-hidden="true" /> Email Me
+          </a>
         </FadeInSection>
       </Container>
     </>

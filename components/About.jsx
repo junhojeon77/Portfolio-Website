@@ -5,43 +5,35 @@ import AvailabilityBadge from "./AvailabilityBadge";
 
 export default function About() {
   return (
-    <Container className="my-5">
+    <Container>
       <Row className="align-items-center">
         {/* Text Column */}
         <Col xs={12} md={7}>
           <FadeInSection>
-            <h1 className="mb-3 fs-1">/ about</h1>
-          </FadeInSection>
-          <FadeInSection>
+            <h2 className="mb-3 fs-1">/ about</h2>
             <AvailabilityBadge className="mb-4" />
-          </FadeInSection>
-          <FadeInSection>
             <p className="fs-6">
               I&apos;m a Freelance Software Developer specializing in{" "}
-              <strong style={{ color: "red" }}>Full Stack Development</strong>, with an interest in AI/ML. 
+              <strong className="accent">Full Stack Development</strong>, with an interest in AI/ML.
               Currently a Software Developer Student in my last year of
               Computer Programming & Analysis at{" "}
-              <strong style={{ color: "red" }}>Seneca Polytechnic</strong>.
+              <strong className="accent">Seneca Polytechnic</strong>.
             </p>
-          </FadeInSection>
-          <FadeInSection>
             <p>Here are some technologies I have been working with:</p>
-          </FadeInSection>
-          <FadeInSection>
             <Row>
               <Col xs={6}>
                 <ul className="list-unstyled">
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> Node.js
+                    <span className="accent" aria-hidden="true">*</span> Node.js
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> React
+                    <span className="accent" aria-hidden="true">*</span> React
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> TypeScript
+                    <span className="accent" aria-hidden="true">*</span> TypeScript
                   </li>
                 </ul>
               </Col>
@@ -49,29 +41,25 @@ export default function About() {
                 <ul className="list-unstyled">
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> Python
+                    <span className="accent" aria-hidden="true">*</span> Python
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> Go
+                    <span className="accent" aria-hidden="true">*</span> Dart
                   </li>
                   <li>
                     {" "}
-                    <span style={{ color: "red" }}>*</span> C/C++
+                    <span className="accent" aria-hidden="true">*</span> C/C++
                   </li>
                 </ul>
               </Col>
             </Row>
-          </FadeInSection>
-          <FadeInSection>
             <p>
-              Outside of programming, I play a lot of Sports (mostly baseketball). I also play a lot
+              Outside of programming, I play a lot of sports (mostly basketball). I also play a lot
               of video games.
             </p>
-          </FadeInSection>
-          <FadeInSection>
             <a
-              href="/Jeon's Resumee.pdf"
+              href="/Junho-Jeon-Resume.pdf"
               download
               className="btn btn-dark d-inline-flex align-items-center gap-2 mt-2 hover-animate"
               aria-label="Download my resume as a PDF"
@@ -97,8 +85,8 @@ export default function About() {
         <Col xs={12} md={5} className="d-none d-md-block">
           <FadeInSection>
             <Image
-              src="/junho.jpeg"
-              alt="Profile"
+              src="/me.jpeg"
+              alt="Portrait of Jun Ho Jeon"
               width={800}
               height={1000}
               className="rounded-4 shadow"

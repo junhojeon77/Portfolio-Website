@@ -1,23 +1,36 @@
+:root {
+  --bg: #faf9f6; /* paper */
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --accent: #b91c1c; /* 6.2:1 on paper */
+  --border: rgba(0, 0, 0, 0.12);
+  --brand: var(--bg); /* legacy alias */
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(128, 172, 255);
+  background-color: var(--bg);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* offset anchored sections for the fixed navbar */
+/* each section fills the viewport and centers its content, so anchor
+   jumps land with the section alone on screen, vertically centered */
 section[id] {
-  scroll-margin-top: 80px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 0;
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
@@ -37,10 +50,9 @@ a {
 
 .fade-in-section {
   opacity: 0;
-  transform: translateY(10vh);
+  transform: translateY(24px);
   visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .fade-in-section.is-visible {
   opacity: 1;
@@ -49,8 +61,83 @@ a {
 }
 
 code,
-* {
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Fira Code", monospace;
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* hidden until keyboard-focused, then shown above the fixed navbar */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2000;
+  padding: 8px 16px;
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 4px;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* floating Spotify player, desktop only; top offset clears the fixed navbar */
+.spotify-player {
+  position: fixed;
+  top: 76px;
+  right: 16px;
+  z-index: 1030;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.spotify-frame {
+  width: 420px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.spotify-toggle {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #151515;
+  color: #1db954;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.spotify-toggle.is-min {
+  width: auto;
+  height: 48px;
+  border-radius: 999px;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.spotify-toggle-label {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .font-code {
@@ -87,7 +174,64 @@ code,
 }
 
 .nav_collapse {
-  background-color: rgb(128, 172, 255);
+  background-color: var(--bg);
+}
+
+.navbar.nav_collapse {
+  border-bottom: 1px solid var(--border);
+}
+
+/* Experience tabs: side indicator bar on desktop, underline on mobile */
+.exp-nav .nav-link {
+  color: var(--text);
+  border-left: 2px solid transparent;
+  border-radius: 0;
+  text-align: left;
+  padding: 8px 16px;
+}
+
+.exp-nav .nav-link:hover {
+  color: var(--accent);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.exp-nav .nav-link.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* stack all panes in one grid cell so the section keeps the height of the
+   tallest pane — switching tabs no longer re-centers/shifts the layout */
+.exp-content {
+  display: grid;
+}
+
+.exp-content > .tab-pane {
+  grid-area: 1 / 1;
+  display: block;
+  visibility: hidden;
+}
+
+.exp-content > .tab-pane.active {
+  visibility: visible;
+}
+
+@media (max-width: 767px) {
+  .exp-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .exp-nav .nav-link {
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  .exp-nav .nav-link.active {
+    border-left: 0;
+    border-bottom-color: var(--accent);
+  }
 }
 
 /* "Available to work" status pill */
@@ -97,12 +241,11 @@ code,
   gap: 8px;
   padding: 6px 14px;
   border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1a1a1a;
-  backdrop-filter: blur(4px);
+  color: var(--text);
 }
 
 .availability-dot {
@@ -142,5 +285,14 @@ code,
     animation: none;
     opacity: 1;
     transform: none;
+  }
+  .fade-in-section {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }

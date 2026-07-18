@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import SpotifyPlayer from "../components/SpotifyPlayer";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fontsource/fira-code";
@@ -20,7 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        {children}
+        <SpotifyPlayer />
+        <Analytics />
+      </body>
     </html>
   );
 }

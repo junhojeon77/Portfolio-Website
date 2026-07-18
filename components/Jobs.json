@@ -1,0 +1,30 @@
+[
+  {
+    "key": "cafe-princess",
+    "role": "Freelance Full Stack Developer / Designer",
+    "company": "Café Princess",
+    "date": "Feb 2026 – June 2026",
+    "location": "Toronto, ON",
+    "website": "https://cafe-princess.vercel.app/",
+    "bullets": [
+      "Modernized the customer ordering experience by developing a responsive digital storefront with React 18, TypeScript and Tailwind, successfully replacing physical menus",
+      "Cut menu update times by 80% by building a secure Supabase admin portal that granted staff comprehensive CRUD control",
+      "Ensured 100% uptime and uninterrupted customer access by engineering a zero-downtime static fallback with a single-flag failover",
+      "Reduced storage footprint by 90% and remained under a 5GB egress budget by implementing WebP compression and custom Node.js automation scripts"
+    ],
+    "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js"
+  },
+  {
+    "key": "sunjin",
+    "role": "Freelance Mobile Application Developer",
+    "company": "Sunjin School",
+    "date": "Jun 2025 – Jul 2025",
+    "location": "Gyeonggi-do, KR",
+    "website": "",
+    "bullets": [
+      "Developed a cross-platform mobile application in Flutter (Dart) that simulated a real-world cinema visit, teaching elementary students life skills such as purchasing tickets, locating seats, and following venue etiquette",
+      "Designed and implemented accessible UI/UX features that increased independent task completion by 60% for students with disabilities"
+    ],
+    "tech": "Flutter, Dart"
+  }
+]

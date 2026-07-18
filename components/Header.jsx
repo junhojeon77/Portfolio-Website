@@ -7,7 +7,7 @@ import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <Navbar expand="lg" className="nav_collapse bg-[rgb(128,172,255)]" fixed="top">
+    <Navbar expand="lg" className="nav_collapse" fixed="top">
       <Container>
         <Navbar.Brand href="#home" className="fs-6 ps-2">
           Jun Ho Jeon
@@ -26,6 +26,9 @@ export default function Header() {
             <Nav.Link className="fs-8" href="#about">
               About
             </Nav.Link>
+            <Nav.Link className="fs-8" href="#experience">
+              Experience
+            </Nav.Link>
             <Nav.Link className="fs-8" href="#projects">
               Projects
             </Nav.Link>
@@ -35,35 +38,37 @@ export default function Header() {
           <Nav className="ms-auto pe-2">
             <Nav.Link
               href="mailto:junhojeon88@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
               className="fs-8"
+              aria-label="Email me"
             >
-              <FaEnvelope size={20} />
+              <FaEnvelope size={20} aria-hidden="true" />
             </Nav.Link>
             <Nav.Link
               href="https://github.com/junhojeon77"
               target="_blank"
               rel="noopener noreferrer"
               className="fs-8"
+              aria-label="GitHub profile"
             >
-              <FaGithub size={20} />
+              <FaGithub size={20} aria-hidden="true" />
             </Nav.Link>
             <Nav.Link
               href="https://www.linkedin.com/in/jun-ho-jeon-a08060252"
               target="_blank"
               rel="noopener noreferrer"
               className="fs-8"
+              aria-label="LinkedIn profile"
             >
-              <FaLinkedin size={20} />
+              <FaLinkedin size={20} aria-hidden="true" />
             </Nav.Link>
             <Nav.Link
               href="https://www.instagram.com/_jjun.ho/"
               target="_blank"
               rel="noopener noreferrer"
               className="fs-8"
+              aria-label="Instagram profile"
             >
-              <FaInstagram size={20} />
+              <FaInstagram size={20} aria-hidden="true" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
