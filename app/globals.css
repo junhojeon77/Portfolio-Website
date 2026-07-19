@@ -76,6 +76,15 @@ h6 {
   font-weight: 600;
 }
 
+/* hero ASCII art canvas: sized in JS to fit its container */
+.ascii-art {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  cursor: crosshair;
+  touch-action: none; /* finger-drag ripples the art instead of scrolling */
+}
+
 /* hidden until keyboard-focused, then shown above the fixed navbar */
 .skip-link {
   position: fixed;

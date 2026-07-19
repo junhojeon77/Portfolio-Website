@@ -1,6 +1,6 @@
 "use client";
 
-import Hero3D from "@/components/Hero3D.jsx";
+import AsciiArt from "@/components/AsciiArt.jsx";
 import { ReactTyped } from "react-typed";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaEnvelope } from "react-icons/fa";
@@ -10,8 +10,10 @@ export default function Hero() {
   return (
     <>
       <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
-        <p className="text-center fs-3">Move me!</p>
-        <Hero3D />
+        <AsciiArt />
+        <p className="text-secondary fs-8 mt-1">
+          (psst — run your cursor over me)
+        </p>
         <h1 className="text-center mt-2 display-4">
           <ReactTyped
             startWhenVisible
