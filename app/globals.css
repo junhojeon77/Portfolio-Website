@@ -4,7 +4,48 @@
   --text: #1a1a1a;
   --accent: #b91c1c; /* 6.2:1 on paper */
   --border: rgba(0, 0, 0, 0.12);
+  --ascii: #57534e; /* portrait: pencil gray on paper */
   --brand: var(--bg); /* legacy alias */
+}
+
+/* paper at night — follows the OS theme via data-bs-theme (set in layout) */
+[data-bs-theme="dark"] {
+  --bg: #171512;
+  --surface: #211f1b;
+  --text: #e8e6e3;
+  --accent: #f87171; /* #b91c1c fails contrast on dark */
+  --border: rgba(255, 255, 255, 0.14);
+  --ascii: #a8a29e;
+  --bs-secondary-rgb: 168, 162, 158; /* .text-secondary readable on dark */
+}
+
+/* btn-dark / btn-outline-dark are invisible on a dark bg — flip them light */
+[data-bs-theme="dark"] .btn-dark {
+  --bs-btn-bg: #e8e6e3;
+  --bs-btn-border-color: #e8e6e3;
+  --bs-btn-color: #1a1a1a;
+  --bs-btn-hover-bg: #d6d3d1;
+  --bs-btn-hover-border-color: #d6d3d1;
+  --bs-btn-hover-color: #1a1a1a;
+  --bs-btn-active-bg: #d6d3d1;
+  --bs-btn-active-border-color: #d6d3d1;
+  --bs-btn-active-color: #1a1a1a;
+}
+
+[data-bs-theme="dark"] .btn-outline-dark {
+  --bs-btn-color: #e8e6e3;
+  --bs-btn-border-color: #e8e6e3;
+  --bs-btn-hover-bg: #e8e6e3;
+  --bs-btn-hover-border-color: #e8e6e3;
+  --bs-btn-hover-color: #1a1a1a;
+  --bs-btn-active-bg: #e8e6e3;
+  --bs-btn-active-border-color: #e8e6e3;
+  --bs-btn-active-color: #1a1a1a;
+}
+
+[data-bs-theme="dark"] .exp-nav .nav-link:hover,
+[data-bs-theme="dark"] .exp-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 html,
@@ -76,11 +117,13 @@ h6 {
   font-weight: 600;
 }
 
-/* hero ASCII art canvas: sized in JS to fit its container */
+/* hero ASCII art canvas: sized in JS to fit its container;
+   color read by the canvas via getComputedStyle so it follows the theme */
 .ascii-art {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+  color: var(--ascii);
   cursor: crosshair;
   touch-action: none; /* finger-drag ripples the art instead of scrolling */
 }
@@ -92,8 +135,8 @@ h6 {
   left: 8px;
   z-index: 2000;
   padding: 8px 16px;
-  background: #fff;
-  color: #1a1a1a;
+  background: var(--surface);
+  color: var(--text);
   border-radius: 4px;
   transform: translateY(-200%);
 }
@@ -179,6 +222,21 @@ h6 {
   color: var(--text);
 }
 
+/* captions sit on our dark scrim, so keep them white in BOTH themes —
+   Bootstrap's dark mode otherwise flips captions/controls to black */
+[data-bs-theme="dark"] .carousel .carousel-caption {
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
+[data-bs-theme="dark"] .carousel .carousel-control-next-icon {
+  filter: none;
+}
+
+[data-bs-theme="dark"] .carousel .carousel-indicators [data-bs-target] {
+  background-color: #fff;
+}
+
 /* dark gradient behind carousel captions so text reads over any image */
 .carousel-scrim {
   position: absolute;
@@ -239,7 +297,7 @@ h6 {
   .exp-nav {
     flex-wrap: nowrap;
     overflow-x: auto;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--border);
   }
   .exp-nav .nav-link {
     border-left: 0;

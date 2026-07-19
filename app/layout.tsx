@@ -34,6 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
+        {/* sync Bootstrap color mode with the OS theme before first paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var m=window.matchMedia('(prefers-color-scheme: dark)');var s=function(){document.documentElement.setAttribute('data-bs-theme',m.matches?'dark':'light')};s();m.addEventListener('change',s)})();`,
+          }}
+        />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

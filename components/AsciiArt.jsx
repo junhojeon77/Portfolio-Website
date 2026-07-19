@@ -67,7 +67,7 @@ const art = `                                          .::~;cmY   .,:  .     :
     +Y-  xcvcz;=  j:.;tzvllccjllillllliljvt ,:,..         ..,,;-iil=;-==+i+=+====+~~~------~=~~+=-,,...,==+=~~=-,. ...,.,,,..  .`;
 
 // hover-repel physics: characters flee the cursor and spring back home
-const RADIUS = 40;
+const RADIUS = 100;
 const FORCE = 150;
 const SPRING = 0.06;
 const DAMP = 0.86;
@@ -82,7 +82,6 @@ export default function AsciiArt() {
     const lines = art.split("\n");
     const cols = Math.max(...lines.map((l) => l.length));
     const rows = lines.length;
-    const color = "#57534e"; // warm gray, pencil-sketch feel on the paper bg
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const mouse = { x: -9999, y: -9999 };
     let particles = [];
@@ -124,7 +123,8 @@ export default function AsciiArt() {
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = color;
+      // .ascii-art sets color: var(--ascii) — follows light/dark theme live
+      ctx.fillStyle = getComputedStyle(canvas).color;
       for (const p of particles) ctx.fillText(p.ch, p.x, p.y);
     };
 
@@ -138,9 +138,17 @@ export default function AsciiArt() {
     };
     window.addEventListener("resize", onResize);
 
+    // repaint in the new color when the OS theme flips while idle
+    const scheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const onScheme = () => requestAnimationFrame(draw);
+    scheme.addEventListener("change", onScheme);
+
     if (reduced) {
       // static art only for reduced-motion users
-      return () => window.removeEventListener("resize", onResize);
+      return () => {
+        window.removeEventListener("resize", onResize);
+        scheme.removeEventListener("change", onScheme);
+      };
     }
 
     let wasActive = false;
@@ -202,6 +210,7 @@ export default function AsciiArt() {
       canvas.removeEventListener("pointermove", onMove);
       canvas.removeEventListener("pointerleave", onLeave);
       window.removeEventListener("resize", onResize);
+      scheme.removeEventListener("change", onScheme);
     };
   }, []);
 
