@@ -11,8 +11,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jun's Portfolio",
-  description: "Portfolio website showcasing my projects and skills.",
+  title: "Jun Ho Jeon — Full Stack Developer",
+  description:
+    "Portfolio of Jun Ho Jeon, a full stack developer in Toronto bridging software development with AI/ML.",
+  openGraph: {
+    title: "Jun Ho Jeon — Full Stack Developer",
+    description:
+      "Portfolio of Jun Ho Jeon, a full stack developer in Toronto bridging software development with AI/ML.",
+    type: "website",
+    images: ["/me.jpeg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

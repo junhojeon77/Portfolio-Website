@@ -67,10 +67,11 @@ const art = `                                          .::~;cmY   .,:  .     :
     +Y-  xcvcz;=  j:.;tzvllccjllillllliljvt ,:,..         ..,,;-iil=;-==+i+=+====+~~~------~=~~+=-,,...,==+=~~=-,. ...,.,,,..  .`;
 
 // hover-repel physics: characters flee the cursor and spring back home
-const RADIUS = 30;
+const RADIUS = 40;
 const FORCE = 150;
 const SPRING = 0.06;
 const DAMP = 0.86;
+const ENTRANCE_DAMP = 0.94; // looser damping while gathering = more bounce
 
 export default function AsciiArt() {
   const canvasRef = useRef(null);
@@ -86,7 +87,7 @@ export default function AsciiArt() {
     const mouse = { x: -9999, y: -9999 };
     let particles = [];
 
-    const setup = () => {
+    const setup = (scatter = false) => {
       const maxW = canvas.parentElement.clientWidth;
       const fontSize = Math.max(4, Math.min(7, maxW / (cols * 0.6)));
       const charW = fontSize * 0.6; // Fira Code advance width
@@ -105,7 +106,18 @@ export default function AsciiArt() {
           if (line[c] === " ") continue;
           const hx = c * charW;
           const hy = r * lineH;
-          particles.push({ ch: line[c], hx, hy, x: hx, y: hy, vx: 0, vy: 0 });
+          let x = hx;
+          let y = hy;
+          if (scatter) {
+            // start on a ring outside the canvas so the swarm collapses
+            // inward through the middle before springing into place
+            const angle = Math.random() * Math.PI * 2;
+            const dist =
+              (0.03 + Math.random() * 0.09) * Math.max(cols * charW, rows * lineH);
+            x = hx + Math.cos(angle) * dist;
+            y = hy + Math.sin(angle) * dist;
+          }
+          particles.push({ ch: line[c], hx, hy, x, y, vx: 0, vy: 0 });
         }
       });
     };
@@ -116,7 +128,8 @@ export default function AsciiArt() {
       for (const p of particles) ctx.fillText(p.ch, p.x, p.y);
     };
 
-    setup();
+    // entrance: start scattered and let the spring gather the portrait
+    setup(!reduced);
     draw();
 
     const onResize = () => {
@@ -131,6 +144,7 @@ export default function AsciiArt() {
     }
 
     let wasActive = false;
+    let entrance = true; // bouncier damping until the gather settles
     let frameId;
     const tick = () => {
       let active = false;
@@ -146,8 +160,9 @@ export default function AsciiArt() {
         }
         p.vx += (p.hx - p.x) * SPRING;
         p.vy += (p.hy - p.y) * SPRING;
-        p.vx *= DAMP;
-        p.vy *= DAMP;
+        const damp = entrance ? ENTRANCE_DAMP : DAMP;
+        p.vx *= damp;
+        p.vy *= damp;
         p.x += p.vx;
         p.y += p.vy;
         if (
@@ -163,6 +178,7 @@ export default function AsciiArt() {
         }
       }
       if (active || wasActive) draw(); // final draw snaps everything home
+      if (!active) entrance = false; // settled: back to normal repel feel
       wasActive = active;
       frameId = requestAnimationFrame(tick);
     };

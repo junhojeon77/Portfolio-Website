@@ -1,6 +1,6 @@
 // components/Projects.jsx
 "use client";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import projectsData from "../components/Projects.json";
 import CarouselData from "../components/CarouselCard.json";
@@ -15,7 +15,7 @@ export default function Projects() {
 
   return (
     <>
-      <section className="project-section py-5">
+      <section className="py-5">
         <Container>
           <FadeInSection>
             <h2 className="mb-5 fs-1"> / projects </h2>
@@ -28,25 +28,30 @@ export default function Projects() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 1200px) 100vw, 1200px"
-                      style={{ opacity: 0.9, objectFit: "cover" }}
+                      style={{ objectFit: "cover" }}
                     />
+                    {/* gradient scrim so caption text reads over any image */}
+                    <div className="carousel-scrim" aria-hidden="true" />
                   </div>
-                  <Carousel.Caption className="caption-top-left">
-                    <Card style={{opacity: 0.95, backgroundColor: "var(--surface)", border: "1px solid var(--border)", padding: "0.4rem"}}>
-                      <h3 className="text-dark">{item.title}</h3>
-                      <p style={{ whiteSpace: "pre-line" }}>{item.desc}</p>
-                      <p className="accent">{item.tech}</p>
+                  <Carousel.Caption>
+                    <h3>{item.title}</h3>
+                    <p style={{ whiteSpace: "pre-line" }} className="mb-1">
+                      {item.desc}
+                    </p>
+                    <p className="carousel-tech mb-1">{item.tech}</p>
 
                     <div className="d-flex justify-content-center">
-                    <a
-                      href={item.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn "
-                      aria-label={`${item.title} on GitHub`}
-                    >
-                      <FaGithub size={27} className="text-dark" aria-hidden="true" />
-                    </a>
+                    {item.github && (
+                      <a
+                        href={item.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn "
+                        aria-label={`${item.title} on GitHub`}
+                      >
+                        <FaGithub size={27} className="text-white" aria-hidden="true" />
+                      </a>
+                    )}
                     {item.website && (
                       <a
                         href={item.website}
@@ -57,14 +62,13 @@ export default function Projects() {
                       >
                         <FaExternalLinkSquareAlt
                           size={27}
-                          className="text-dark"
+                          className="text-white"
                           aria-hidden="true"
                         />
                       </a>
 
                     )}
                     </div>
-                    </Card>
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}

@@ -5,7 +5,7 @@
     "website": "",
     "title": "AI Emotion Detector",
     "image": "/emotion-detect.png",
-    "desc": "Lightweight CNN-based facial emotion\nrecognition using data from FER2013.\nA real-time labeled feed plus a growing positive\nsample corpus that can train a learned classifier\nor benchmark against the cascade baseline\nusing triplet loss.",
+    "desc": "Lightweight CNN facial-emotion recognition\ntrained on FER2013, with a real-time labeled feed\nand a growing sample corpus for training a\ntriplet-loss classifier against the cascade baseline.",
     "tech": "TensorFlow, Python"
   },
   {
@@ -19,11 +19,11 @@
   },
   {
     "id": 6,
-    "github": "",
-    "website": "",
-    "title": "Fragments Microservices",
-    "image": "/fragments-architecture.svg",
-    "desc": "Cloud-native microservice for CRUD on mixed content\n(text, JSON, images) with Cognito auth enforced at the edge\nand metadata split from binary storage.",
-    "tech": "Node.js, Express, Amazon Cognito, DynamoDB, S3, Docker, GitHub Actions"
+    "github": "https://github.com/junhojeon77/gaminglaptop-back",
+    "website": "https://gamingdeals-ca.vercel.app/",
+    "title": "Gaming Laptop AI Recommender",
+    "image": "/laptoppicker.png",
+    "desc": "Scrapes live gaming-laptop listings\nand serves AI-powered recommendations\nthrough a chatbot.",
+    "tech": "Next.js, Puppeteer, React"
   }
 ]

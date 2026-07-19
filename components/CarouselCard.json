@@ -10,20 +10,20 @@
   },
   {
     "id": 2,
-    "github": "https://github.com/junhojeon77/gaminglaptop-back",
-    "website": "https://gamingdeals-ca.vercel.app/",
-    "title": "Gaming Laptop AI Recommendor",
-    "image": "/laptoppicker.png",
-    "desc": "Simple Website that\nscrapes gaming laptop data \nand provides AI-based recommendations in a chatbot.",
-    "tech": "Next.js, Puppeteer, React"
+    "github": "",
+    "website": "",
+    "title": "Fragments Microservices",
+    "image": "/FragmentsMicroservices.jpg",
+    "desc": "Cloud-native microservice for CRUD on mixed content\n(text, JSON, images) with Cognito auth enforced at the edge\nand metadata split from binary storage.",
+    "tech": "Node.js, Express, Amazon Cognito, DynamoDB, S3, Docker, GitHub Actions"
   },
   {
     "id": 3,
     "github": "https://github.com/junhojeon77/Self-Driving-Car-Simulation-Project-Using-CNN",
     "website": "https://www.youtube.com/watch?v=H2knQpCKevY",
     "title": "Self-Driving Car Simulation",
-    "image": "/self-driving-car.png",
-    "desc": "Simulation of a self-driving car using \nCNNs and reinforcement learning.",
+    "image": "/self-driving-car.jpg",
+    "desc": "Trains a simulated self-driving car\nusing CNNs and reinforcement learning.",
     "tech": "TensorFlow, Python, OpenCV"
   }
 ]

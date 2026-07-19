@@ -12,7 +12,7 @@ export default function Hero() {
       <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
         <AsciiArt />
         <p className="text-secondary fs-8 mt-1">
-          (psst — run your cursor over me)
+          (psst — touch me!)
         </p>
         <h1 className="text-center mt-2 display-4">
           <ReactTyped
@@ -30,10 +30,11 @@ export default function Hero() {
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
               <p className="mt-3 fs-6 card-subtitle">
-                I&apos;m a Freelance Full Stack Developer from South
-                Korea/Toronto, bridging software development with AI/ML —
-                engineering scalable solutions while actively training models
-                for complex real-world problems.
+                I&apos;m a freelance full-stack developer based in Toronto —
+                born in South Korea and raised mostly in the Philippines. I
+                ship client work end to end — storefronts, mobile apps, cloud
+                microservices — and bring AI/ML into projects where it earns
+                its keep.
               </p>
             </Col>
           </Row>

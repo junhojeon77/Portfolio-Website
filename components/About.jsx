@@ -13,13 +13,14 @@ export default function About() {
             <h2 className="mb-3 fs-1">/ about</h2>
             <AvailabilityBadge className="mb-4" />
             <p className="fs-6">
-              I&apos;m a Freelance Software Developer specializing in{" "}
-              <strong className="accent">Full Stack Development</strong>, with an interest in AI/ML.
-              Currently a Software Developer Student in my last year of
-              Computer Programming & Analysis at{" "}
-              <strong className="accent">Seneca Polytechnic</strong>.
+              I&apos;m a freelance software developer specializing in{" "}
+              <strong className="accent">full-stack development</strong>, now
+              in my final year of Computer Programming & Analysis at{" "}
+              <strong className="accent">Seneca Polytechnic</strong>. Recent
+              client work includes a production storefront for a Toronto café
+              and an educational mobile app for a school in Korea.
             </p>
-            <p>Here are some technologies I have been working with:</p>
+            <p>Technologies I work with most:</p>
             <Row>
               <Col xs={6}>
                 <ul className="list-unstyled">
@@ -55,8 +56,8 @@ export default function About() {
               </Col>
             </Row>
             <p>
-              Outside of programming, I play a lot of sports (mostly basketball). I also play a lot
-              of video games.
+              Away from the keyboard, I&apos;m usually on a basketball court or
+              in a video game.
             </p>
             <a
               href="/Junho-Jeon-Resume.pdf"
