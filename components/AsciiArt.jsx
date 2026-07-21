@@ -88,7 +88,11 @@ export default function AsciiArt() {
 
     const setup = (scatter = false) => {
       const maxW = canvas.parentElement.clientWidth;
-      const fontSize = Math.max(4, Math.min(7, maxW / (cols * 0.6)));
+      // phones: cap the portrait at ~30% of the viewport so the heading, bio
+      // and CTA still fit under the fixed navbar. Desktop stays width-driven —
+      // half a desktop viewport height clears the 7px cap anyway.
+      const budget = window.innerHeight * (window.innerWidth < 768 ? 0.3 : 0.5);
+      const fontSize = Math.max(3, Math.min(7, maxW / (cols * 0.6), budget / rows));
       const charW = fontSize * 0.6; // Fira Code advance width
       const lineH = fontSize;
       const dpr = window.devicePixelRatio || 1;

@@ -9,7 +9,7 @@ import FadeInSection from "@/components/hooks/FadeInSection";
 export default function Hero() {
   return (
     <>
-      <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+      <Container className="d-flex flex-column justify-content-center align-items-center text-center">
         <AsciiArt />
         <p className="text-secondary fs-8 mt-1">
           (psst — touch me!)
