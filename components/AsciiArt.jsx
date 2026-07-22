@@ -142,23 +142,31 @@ export default function AsciiArt() {
     };
     window.addEventListener("resize", onResize);
 
-    // repaint in the new color when the OS theme flips while idle
-    const scheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const onScheme = () => requestAnimationFrame(draw);
-    scheme.addEventListener("change", onScheme);
+    // repaint in the new color when the theme flips while idle — the toggle
+    // writes data-bs-theme, and so does the OS-following script in layout.tsx
+    const themeObserver = new MutationObserver(() =>
+      requestAnimationFrame(draw)
+    );
+    themeObserver.observe(document.documentElement, {
+      attributeFilter: ["data-bs-theme"],
+    });
 
     if (reduced) {
       // static art only for reduced-motion users
       return () => {
         window.removeEventListener("resize", onResize);
-        scheme.removeEventListener("change", onScheme);
+        themeObserver.disconnect();
       };
     }
 
     let wasActive = false;
     let entrance = true; // bouncier damping until the gather settles
-    let frameId;
+    let frameId = null;
+    const start = () => {
+      if (frameId === null) frameId = requestAnimationFrame(tick);
+    };
     const tick = () => {
+      frameId = null;
       let active = false;
       for (const p of particles) {
         const dx = p.x - mouse.x;
@@ -192,29 +200,31 @@ export default function AsciiArt() {
       if (active || wasActive) draw(); // final draw snaps everything home
       if (!active) entrance = false; // settled: back to normal repel feel
       wasActive = active;
-      frameId = requestAnimationFrame(tick);
+      if (active) start(); // settled ⇒ stop burning frames until the pointer returns
     };
-    frameId = requestAnimationFrame(tick);
+    start();
 
     const onMove = (e) => {
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
+      start();
     };
     const onLeave = () => {
       mouse.x = -9999;
       mouse.y = -9999;
+      start();
     };
     // pointer events cover mouse, touch, and stylus alike
     canvas.addEventListener("pointermove", onMove);
     canvas.addEventListener("pointerleave", onLeave);
 
     return () => {
-      cancelAnimationFrame(frameId);
+      if (frameId !== null) cancelAnimationFrame(frameId);
       canvas.removeEventListener("pointermove", onMove);
       canvas.removeEventListener("pointerleave", onLeave);
       window.removeEventListener("resize", onResize);
-      scheme.removeEventListener("change", onScheme);
+      themeObserver.disconnect();
     };
   }, []);
 

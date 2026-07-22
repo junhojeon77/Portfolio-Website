@@ -1,22 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-export default function ThemeToggle() {
-  // read after mount, not during render — the pre-paint script in layout.tsx
-  // has already set the attribute, and reading it here would mismatch SSR
-  const [theme, setTheme] = useState(null);
+// the <html data-bs-theme> attribute is the source of truth — the pre-paint
+// script in layout.tsx sets it before React exists, so subscribe to it rather
+// than keeping a second copy in state
+const subscribe = (onChange) => {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributeFilter: ["data-bs-theme"],
+  });
+  return () => observer.disconnect();
+};
 
-  useEffect(() => {
-    setTheme(document.documentElement.getAttribute("data-bs-theme") || "light");
-  }, []);
+export default function ThemeToggle() {
+  const theme = useSyncExternalStore(
+    subscribe,
+    () => document.documentElement.getAttribute("data-bs-theme") || "light",
+    () => "light" // SSR has no attribute yet; the script fixes it before paint
+  );
 
   function toggle() {
     const next = theme === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-bs-theme", next);
     localStorage.setItem("theme", next);
-    setTheme(next);
   }
 
   return (

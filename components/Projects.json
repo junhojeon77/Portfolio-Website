@@ -5,7 +5,7 @@
     "github": "https://github.com/junhojeon77/job-match",
     "website": "https://job-match-gray.vercel.app/",
     "title": "JobMatch",
-    "image": "/jobmatch.png",
+    "image": "/jobmatch.webp",
     "desc": "Full-stack AI job finder using OpenAI APIs \nand agentic workflows with real-time job-search,\nKV-backed rate limiting, and résumé parsing.",
     "tech": "TypeScript, Next.js, OpenAI API, Zod"
   },
@@ -15,7 +15,7 @@
     "github": "",
     "website": "",
     "title": "Fragments Microservices",
-    "image": "/FragmentsMicroservices.jpg",
+    "image": "/FragmentsMicroservices.webp",
     "desc": "Cloud-native microservice for CRUD on mixed content\n(text, JSON, images) with Cognito auth enforced at the edge\nand metadata split from binary storage.",
     "tech": "Node.js, Express, Amazon Cognito, DynamoDB, S3, Docker, GitHub Actions"
   },
@@ -25,7 +25,7 @@
     "github": "https://github.com/junhojeon77/Self-Driving-Car-Simulation-Project-Using-CNN",
     "website": "https://www.youtube.com/watch?v=H2knQpCKevY",
     "title": "Self-Driving Car Simulation",
-    "image": "/self-driving-car.jpg",
+    "image": "/self-driving-car.webp",
     "desc": "Trains a simulated self-driving car\nusing CNNs and reinforcement learning.",
     "tech": "TensorFlow, Python, OpenCV"
   },
@@ -34,7 +34,7 @@
     "github": "https://github.com/junhojeon77/EmotionDetector",
     "website": "",
     "title": "AI Emotion Detector",
-    "image": "/emotion-detect.png",
+    "image": "/emotion-detect.webp",
     "desc": "Lightweight CNN facial-emotion recognition\ntrained on FER2013, with a real-time labeled feed\nand a growing sample corpus for training a\ntriplet-loss classifier against the cascade baseline.",
     "tech": "TensorFlow, Python"
   },
@@ -43,7 +43,7 @@
     "github": "https://github.com/junhojeon77/gaminglaptop-back",
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop AI Recommender",
-    "image": "/laptoppicker.png",
+    "image": "/laptoppicker.webp",
     "desc": "Scrapes live gaming-laptop listings\nand serves AI-powered recommendations\nthrough a chatbot.",
     "tech": "Next.js, Puppeteer, React"
   }
