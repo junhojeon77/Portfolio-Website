@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -36,6 +37,7 @@ export default function Header() {
 
           {/* Logos */}
           <Nav className="ms-auto pe-2">
+            <ThemeToggle />
             <Nav.Link
               href="mailto:junhojeon88@gmail.com"
               className="fs-8"

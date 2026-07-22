@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-website-junhojeon77.vercel.app"),
   title: "Jun Ho Jeon — Full Stack Developer",
   description:
     "Portfolio of Jun Ho Jeon, a full stack developer in Toronto bridging software development with AI/ML.",
@@ -34,10 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        {/* sync Bootstrap color mode with the OS theme before first paint */}
+        {/* set the color mode before first paint: stored choice wins, OS is the
+            fallback (and only keeps tracking while there's no stored choice) */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var m=window.matchMedia('(prefers-color-scheme: dark)');var s=function(){document.documentElement.setAttribute('data-bs-theme',m.matches?'dark':'light')};s();m.addEventListener('change',s)})();`,
+            __html: `(function(){var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)');var s=function(){document.documentElement.setAttribute('data-bs-theme',t||(m.matches?'dark':'light'))};s();if(!t)m.addEventListener('change',s)})();`,
           }}
         />
         <a href="#main-content" className="skip-link">
