@@ -1,18 +1,18 @@
 [
   {
     "key": "cafe-princess",
-    "role": "Freelance Full Stack Developer / Designer",
+    "role": "Freelance Full Stack Developer",
     "company": "Café Princess",
-    "date": "Feb 2026 – June 2026",
+    "date": "Feb 2026 – Jun 2026",
     "location": "Toronto, ON",
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
-      "Modernized the customer ordering experience by developing a responsive digital storefront with React 18, TypeScript and Tailwind, successfully replacing physical menus",
-      "Cut menu update times by 80% by building a secure Supabase admin portal that granted staff comprehensive CRUD control",
-      "Ensured 100% uptime and uninterrupted customer access by engineering a zero-downtime static fallback with a single-flag failover",
-      "Reduced storage footprint by 90% and remained under a 5GB egress budget by implementing WebP compression and custom Node.js automation scripts"
+      "Built the café's customer-facing storefront in React 18, TypeScript, and Tailwind, replacing printed menus",
+      "Built a Supabase admin portal with role-gated CRUD so staff could update menus without a developer",
+      "Added a static fallback with single-flag failover to keep the site reachable if the database goes down",
+      "Cut image payload by roughly 90% with WebP conversion, staying inside the free tier's 5 GB egress limit"
     ],
-    "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js"
+    "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel"
   },
   {
     "key": "sunjin",
@@ -22,8 +22,8 @@
     "location": "Gyeonggi-do, KR",
     "website": "",
     "bullets": [
-      "Developed a cross-platform mobile application in Flutter (Dart) that simulated a real-world cinema visit, teaching elementary students life skills such as purchasing tickets, locating seats, and following venue etiquette",
-      "Designed and implemented accessible UI/UX features that increased independent task completion by 60% for students with disabilities"
+      "Built a Flutter (Dart) app teaching elementary students to buy tickets, find seats, and navigate a cinema",
+      "Designed accessible UI to the school's special-education spec: large touch targets, screen-reader labels, reduced-motion options"
     ],
     "tech": "Flutter, Dart"
   }
