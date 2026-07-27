@@ -1,29 +1,43 @@
 [
   {
+    "key": "villen",
+    "role": "Software Developer (Contract)",
+    "company": "Villen Technologies",
+    "date": "Jun 2026 – Present",
+    "location": "Remote",
+    "website": "",
+    "bullets": [
+      "Helping design the backend scaling architecture for an early-stage product — load balancing and KV-backed rate limiting, so the service degrades predictably under load instead of falling over",
+      "Drafting technical proposals for AI features using structured prompts with Zod schema validation, so model output is type-safe and can be trusted by the code downstream",
+      "Documenting the authentication and access-control approach for the product's security architecture, ahead of implementation"
+    ],
+    "tech": "Node.js, TypeScript, Zod, KV rate limiting, Auth & access control"
+  },
+  {
     "key": "cafe-princess",
-    "role": "Freelance Full Stack Developer",
+    "role": "Full Stack Developer (Freelance)",
     "company": "Café Princess",
     "date": "Feb 2026 – Jun 2026",
     "location": "Toronto, ON",
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
-      "Built the café's customer-facing storefront in React 18, TypeScript, and Tailwind, replacing printed menus",
-      "Built a Supabase admin portal with role-gated CRUD so staff could update menus without a developer",
-      "Added a static fallback with single-flag failover to keep the site reachable if the database goes down",
-      "Cut image payload by roughly 90% with WebP conversion, staying inside the free tier's 5 GB egress limit"
+      "Built the café's customer-facing storefront in React 18, TypeScript, and Tailwind, replacing printed menus that had to be reprinted on every price change",
+      "Built a Supabase admin portal with role-gated CRUD, so staff update menus themselves instead of messaging a developer",
+      "Added a static fallback behind a single flag — if the database goes down, the site stays reachable rather than erroring out",
+      "Cut image payload by roughly 90% with WebP conversion, which kept the whole site inside the free tier's 5 GB egress limit"
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel"
   },
   {
     "key": "sunjin",
-    "role": "Freelance Mobile Application Developer",
+    "role": "Mobile Application Developer (Freelance)",
     "company": "Sunjin School",
     "date": "Jun 2025 – Jul 2025",
     "location": "Gyeonggi-do, KR",
     "website": "",
     "bullets": [
-      "Built a Flutter (Dart) app teaching elementary students to buy tickets, find seats, and navigate a cinema",
-      "Designed accessible UI to the school's special-education spec: large touch targets, screen-reader labels, reduced-motion options"
+      "Built a Flutter app used in classrooms to teach elementary students how to buy tickets, find seats, and navigate a cinema",
+      "Designed the interface to the school's special-education spec — large touch targets, screen-reader labels, reduced-motion options — and had it signed off by their staff"
     ],
     "tech": "Flutter, Dart"
   }

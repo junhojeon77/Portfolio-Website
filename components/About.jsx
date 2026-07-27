@@ -13,12 +13,16 @@ export default function About() {
             <h2 className="mb-3 fs-1">/ about</h2>
             <AvailabilityBadge className="mb-4" />
             <p className="fs-6">
-              I&apos;m a freelance software developer specializing in{" "}
-              <strong className="accent">full-stack development</strong>, now
-              in my final year of Computer Programming & Analysis at{" "}
-              <strong className="accent">Seneca Polytechnic</strong>. Recent
-              client work includes a production storefront for a Toronto café
-              and an educational mobile app for a school in Korea.
+              I&apos;m a full-stack developer finishing my Advanced Diploma in{" "}
+              <strong className="accent">Computer Programming & Analysis</strong>{" "}
+              at <strong className="accent">Seneca Polytechnic</strong> this
+              August, and looking for{" "}
+              <strong className="accent">junior full-stack roles in the GTA</strong>.
+              I&apos;ve already shipped production work for two paying clients — a
+              React and TypeScript storefront for a Toronto café, and a Flutter
+              app for a school in Korea — and I&apos;m currently contracting on
+              backend scaling and security architecture for an early-stage
+              product.
             </p>
             <p>Technologies I work with most:</p>
             <Row>
@@ -26,15 +30,15 @@ export default function About() {
                 <ul className="list-unstyled">
                   <li>
                     {" "}
-                    <span className="accent" aria-hidden="true">*</span> Node.js
-                  </li>
-                  <li>
-                    {" "}
-                    <span className="accent" aria-hidden="true">*</span> React
-                  </li>
-                  <li>
-                    {" "}
                     <span className="accent" aria-hidden="true">*</span> TypeScript
+                  </li>
+                  <li>
+                    {" "}
+                    <span className="accent" aria-hidden="true">*</span> React & Next.js
+                  </li>
+                  <li>
+                    {" "}
+                    <span className="accent" aria-hidden="true">*</span> Node.js
                   </li>
                 </ul>
               </Col>
@@ -46,11 +50,11 @@ export default function About() {
                   </li>
                   <li>
                     {" "}
-                    <span className="accent" aria-hidden="true">*</span> Dart
+                    <span className="accent" aria-hidden="true">*</span> Flutter & Dart
                   </li>
                   <li>
                     {" "}
-                    <span className="accent" aria-hidden="true">*</span> C/C++
+                    <span className="accent" aria-hidden="true">*</span> AWS & Docker
                   </li>
                 </ul>
               </Col>

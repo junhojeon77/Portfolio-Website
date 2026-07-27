@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
         <FadeInSection>
           <p className="text-center card-subtitle fs-3 mt-2">
-            I build apps so I never do it twice
+            I build apps so I never have to do it twice
           </p>
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">

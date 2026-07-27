@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jun Ho Jeon — Full Stack Developer",
     description:
-      "Portfolio of Jun Ho Jeon, a full stack developer in Toronto bridging software development with AI/ML.",
+      "Portfolio of Jun Ho Jeon, a full stack developer in Toronto shipping production React, TypeScript, and Flutter work — seeking junior full-stack roles in the GTA.",
     type: "website",
     images: ["/me.jpeg"],
   },

@@ -6,8 +6,8 @@
     "website": "https://job-match-gray.vercel.app/",
     "title": "JobMatch",
     "image": "/jobmatch.webp",
-    "desc": "Full-stack AI job finder using OpenAI APIs \nand agentic workflows with real-time job-search,\nKV-backed rate limiting, and résumé parsing.",
-    "tech": "TypeScript, Next.js, OpenAI API, Zod"
+    "desc": "Parses a résumé into a typed schema with the OpenAI API,\nthen matches it against live listings with KV-backed rate limiting.\nCuts the apply flow from ~30 minutes to under a minute.",
+    "tech": "TypeScript, Next.js, Node.js, OpenAI API, Zod"
   },
   {
     "id": 2,
@@ -16,8 +16,8 @@
     "website": "",
     "title": "Fragments Microservices",
     "image": "/FragmentsMicroservices.webp",
-    "desc": "Cloud-native microservice for CRUD on mixed content\n(text, JSON, images) with Cognito auth enforced at the edge\nand metadata split from binary storage.",
-    "tech": "Node.js, Express, Amazon Cognito, DynamoDB, S3, Docker, GitHub Actions"
+    "desc": "Cloud-native CRUD microservice for text, JSON, and images,\nwith content-type conversion and Cognito auth at the edge.\nMetadata in DynamoDB, binaries in S3.",
+    "tech": "Node.js, Express, AWS (Cognito, DynamoDB, S3), Docker"
   },
   {
     "id": 3,
@@ -42,9 +42,9 @@
     "id": 5,
     "github": "https://github.com/junhojeon77/gaminglaptop-back",
     "website": "https://gamingdeals-ca.vercel.app/",
-    "title": "Gaming Laptop AI Recommender",
+    "title": "Gaming Laptop Recommender",
     "image": "/laptoppicker.webp",
-    "desc": "Scrapes live gaming-laptop listings\nand serves AI-powered recommendations\nthrough a chatbot.",
-    "tech": "Next.js, Puppeteer, React"
+    "desc": "Scrapes live specs for 1,000+ gaming laptops into NoSQL through a Puppeteer pipeline, holding roughly 90% extraction success across Lenovo and Canada Computers with per-retailer selector configs. A Next.js chat front end recommends laptops by budget and intended use.",
+    "tech": "TypeScript, Next.js, Puppeteer, NoSQL"
   }
 ]
