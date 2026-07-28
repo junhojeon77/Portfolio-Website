@@ -1,5 +1,15 @@
 [
   {
+    "id": 6,
+    "featured": true,
+    "github": "",
+    "website": "",
+    "title": "Smart Stock",
+    "image": "/SmartStock.png",
+    "desc": "Replaces spreadsheet inventory tracking for small restaurants with live stock levels, low-stock and expiry alerts, and waste trends behind role-based access for owners, managers, and staff, plus a chat assistant that answers inventory questions in plain language. Demand forecasts come from a RandomForest service the frontend consumes defensively, so the UI degrades to cached numbers instead of breaking when the model is down. Smart Sourcing compares supplier pricing per ingredient to cut procurement cost.",
+    "tech": "TypeScript, Next.js, React Server Components, Tailwind CSS, MongoDB, Vitest"
+  },
+  {
     "id": 1,
     "featured": true,
     "github": "https://github.com/junhojeon77/job-match",
