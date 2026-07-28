@@ -7,8 +7,8 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Helping design the backend scaling architecture for an early-stage product — load balancing and KV-backed rate limiting, so the service degrades predictably under load instead of falling over",
-      "Drafting technical proposals for AI features using structured prompts with Zod schema validation, so model output is type-safe and can be trusted by the code downstream",
+      "Helping design the backend scaling architecture for an early-stage product — so the service degrades predictably under load instead of falling over",
+      "Drafting technical proposals for AI features using structured prompts, so model output is type-safe and can be trusted by the code downstream",
       "Documenting the authentication and access-control approach for the product's security architecture, ahead of implementation"
     ],
     "tech": "Node.js, TypeScript, Zod, KV rate limiting, Auth & access control"
