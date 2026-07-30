@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "featured": true,
+    "featured": false,
     "github": "https://github.com/junhojeon77/Self-Driving-Car-Simulation-Project-Using-CNN",
     "website": "https://www.youtube.com/watch?v=H2knQpCKevY",
     "title": "Self-Driving Car Simulation",
@@ -50,6 +50,7 @@
   },
   {
     "id": 5,
+    "featured": true,
     "github": "https://github.com/junhojeon77/gaminglaptop-back",
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop Recommender",
