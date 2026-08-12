@@ -6,8 +6,8 @@
     "website": "",
     "title": "Smart Stock",
     "image": "/SmartStock.png",
-    "desc": "Replaces spreadsheet inventory tracking for small restaurants with live stock levels, low-stock and expiry alerts, and waste trends behind role-based access for owners, managers, and staff, plus a chat assistant that answers inventory questions in plain language. Demand forecasts come from a RandomForest service the frontend consumes defensively, so the UI degrades to cached numbers instead of breaking when the model is down. Smart Sourcing compares supplier pricing per ingredient to cut procurement cost.",
-    "tech": "TypeScript, Next.js, React Server Components, Tailwind CSS, MongoDB, Vitest"
+    "desc": "Restaurant inventory app built with a 4-person Agile team, replacing spreadsheet tracking with live stock levels, low-stock and expiry alerts, and waste trends. I built the Next.js frontend with role-based access for owners, managers, and staff, connected to a separate Flask backend that serves all data behind JWT authentication. Also includes demand forecasting and supplier price comparison, so owners order the right amount at the best price.",
+    "tech": "TypeScript, Next.js, Tailwind, Flask API, JWT"
   },
   {
     "id": 1,
@@ -16,7 +16,7 @@
     "website": "https://job-match-gray.vercel.app/",
     "title": "JobMatch",
     "image": "/jobmatch.webp",
-    "desc": "Parses a résumé into a typed schema with the OpenAI API,\nthen matches it against live listings with KV-backed rate limiting.\nCuts the apply flow from ~30 minutes to under a minute.",
+    "desc": "Reads a résumé into a structured profile with the OpenAI API,\nautomatically retrying whenever the AI returns invalid data.\nRate limiting and caching keep it reliable at zero hosting cost.\nCuts tailoring and submitting an application from ~30 minutes to under one.",
     "tech": "TypeScript, Next.js, Node.js, OpenAI API, Zod"
   },
   {
@@ -24,9 +24,9 @@
     "featured": true,
     "github": "https://github.com/junhojeon77/fragments",
     "website": "",
-    "title": "Fragments Microservices",
+    "title": "Fragments Microservice",
     "image": "/FragmentsMicroservices.webp",
-    "desc": "Cloud-native CRUD microservice for text, JSON, and images,\nwith content-type conversion and Cognito auth at the edge.\nMetadata in DynamoDB, binaries in S3.",
+    "desc": "Cloud file service on AWS: stores and converts text, JSON, and images\nthrough a REST API, secured with Amazon Cognito logins.\nFiles live in S3, their details in DynamoDB for fast lookups.\nDockerized, with testing and deployment automated by GitHub Actions.",
     "tech": "Node.js, Express, AWS (Cognito, DynamoDB, S3), Docker"
   },
   {
@@ -55,7 +55,7 @@
     "website": "https://gamingdeals-ca.vercel.app/",
     "title": "Gaming Laptop Recommender",
     "image": "/laptoppicker.webp",
-    "desc": "Scrapes live specs for 1,000+ gaming laptops into NoSQL through a Puppeteer pipeline, holding roughly 90% extraction success across Lenovo and Canada Computers with per-retailer selector configs. A Next.js chat front end recommends laptops by budget and intended use.",
+    "desc": "Automated scraper collecting live specs for 1,000+ gaming laptops\nfrom major retailers, holding roughly 90% collection success as\nthose sites change, by using a separate configuration per retailer.\nA chat front end recommends laptops by budget and intended use.",
     "tech": "TypeScript, Next.js, Puppeteer, NoSQL"
   }
 ]

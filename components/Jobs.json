@@ -7,11 +7,11 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Designed backend scaling architecture alongside founding team to ensure the product remains performant and stable during rapid user growth.",
-      "Drafted technical proposals for AI features utilizing structured prompts and schema validation to gurantee reliable and predictable AI outputs.",
-      "Contributed to the security architecture, planning how rate-limiting, input sanitization and secure authentication to mitigate the early-stage app from common vulnerabilities"
+      "Built a validation layer with Zod that checks every AI chatbot response against a fixed schema, catching malformed output and retrying before it ever reaches a user.",
+      "Secured the app with Firebase Authentication and Vercel KV (Redis) rate limiting, blocking abusive traffic before it reaches the backend.",
+      "Added Sentry error logging so production failures surface right away, cutting debugging time on the early-stage app."
     ],
-    "tech": "Node.js, TypeScript, Zod, KV rate limiting, Auth & access control"
+    "tech": "TypeScript, Node.js, Zod, Firebase Auth, Vercel KV (Redis), Sentry"
   },
   {
     "key": "cafe-princess",
@@ -21,9 +21,9 @@
     "location": "Toronto, ON",
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
-      "Worked directly with the owner to build a customer-facing storefront in React, TypeScript, and PostgreSQL, replacing printed menus",
-      "Built a PostgresSQL database admin portal so staff could update menus and prices themselves, without needing a developer.",
-      "Cut image sizes roughly 90% with WebP conversion, keeping the site within the client’s hosting budget."
+      "Worked directly with the owner to replace printed menus with a customer-facing online storefront for roughly 100 daily customers, built in React, TypeScript, and PostgreSQL.",
+      "Built a Supabase admin portal so staff can update menus, prices, and availability themselves — no developer needed for day-to-day changes.",
+      "Cut image sizes by roughly 90% by converting to WebP, keeping page loads fast and the site inside the client's hosting budget."
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel"
   },
@@ -35,8 +35,8 @@
     "location": "Gyeonggi-do, KR",
     "website": "",
     "bullets": [
-      "Built a Flutter app used in classrooms to teach students how to buy tickets, find seats, and navigate a cinema.",
-      "Gathered accessibility requirements from the school’s special-education staff and built the app to meet them."
+      "Built a Flutter app used by roughly 150 students to practice the steps of going to a cinema: buying a ticket, finding a seat, and navigating the building.",
+      "Gathered accessibility requirements directly from the school's special-education staff, so students with disabilities could navigate and locate seats on their own."
     ],
     "tech": "Flutter, Dart"
   }
