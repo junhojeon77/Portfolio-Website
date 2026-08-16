@@ -17,7 +17,7 @@ export default function Hero() {
         <h1 className="text-center mt-2 display-4">
           <ReactTyped
             startWhenVisible
-            strings={[` Hi,<span class="accent"> Jun</span> here.`]}
+            strings={[` Hi, I'm<span class="accent"> Jun</span>.`]}
             typeSpeed={80}
             html={true}
             smartBackspace
@@ -30,11 +30,8 @@ export default function Hero() {
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
               <p className="mt-3 fs-6 card-subtitle">
-                I&apos;m a full-stack developer based in Toronto —
-                born in South Korea and raised in the Philippines. I
-                ship client work end to end — storefronts, mobile apps, cloud
-                microservices — and bring AI/ML into projects where it earns
-                its keep.
+                I build end-to-end solutions with React and TypeScript, with a
+                strong focus on code quality and things people actually use.
               </p>
             </Col>
           </Row>

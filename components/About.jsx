@@ -13,16 +13,26 @@ export default function About() {
             <h2 className="mb-3 fs-1">/ about</h2>
             <AvailabilityBadge className="mb-4" />
             <p className="fs-6">
-              I&apos;m a full-stack developer finishing my Advanced Diploma in{" "}
+              I&apos;m a full-stack developer familiar with RESTful APIs,
+              microservices, event-driven architecture, and test-driven
+              development (TDD). I build end-to-end solutions with{" "}
+              <strong className="accent">React</strong> and{" "}
+              <strong className="accent">TypeScript</strong>, with a strong
+              focus on code quality and things people actually use, like a
+              storefront a Toronto café runs daily, an accessibility-first app
+              for elementary students, and a cloud API on AWS. Mostly
+              TypeScript, React, and Flutter, with Node and AWS behind them.
+            </p>
+            <p>
+              Born in South Korea, raised in the Philippines, now based in
+              Toronto.
+            </p>
+            <p>
+              Graduating from{" "}
+              <strong className="accent">Seneca</strong>&apos;s{" "}
               <strong className="accent">Computer Programming & Analysis</strong>{" "}
-              at <strong className="accent">Seneca Polytechnic</strong> this
-              August, and looking for{" "}
-              <strong className="accent">junior full-stack roles in the GTA</strong>.
-              I&apos;ve already shipped production work for two paying clients — a
-              React and TypeScript storefront for a Toronto café, and a Flutter
-              app for a school in Korea — and I&apos;m currently contracting on
-              backend scaling and security architecture for an early-stage
-              product.
+              program in August 2026, after a couple of freelance client work
+              along the way.
             </p>
             <p>Technologies I work with most:</p>
             <Row>
@@ -59,9 +69,11 @@ export default function About() {
                 </ul>
               </Col>
             </Row>
+            <p>Outside of code: gaming, basketball, and the gym.</p>
             <p>
-              Away from the keyboard, I&apos;m usually on a basketball court or
-              in a video game.
+              📩 Looking for my first full-time developer role. Let&apos;s
+              connect:{" "}
+              <a href="mailto:junhojeon88@gmail.com">junhojeon88@gmail.com</a>
             </p>
             <a
               href="/Junho-Jeon-Resume.pdf"
