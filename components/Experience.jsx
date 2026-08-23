@@ -28,7 +28,7 @@ export default function Experience() {
                       {job.role} <span className="accent">@ {job.company}</span>
                     </h3>
                     <p className="text-secondary text-uppercase mb-3">
-                      {job.date} · {job.location}
+                      {[job.date, job.location].filter(Boolean).join(" · ")}
                     </p>
                     <ul className="list-unstyled">
                       {job.bullets.map((bullet) => (

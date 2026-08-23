@@ -7,11 +7,11 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Built a validation layer with Zod that checks every AI chatbot response against a fixed schema, catching malformed output and retrying before it ever reaches a user.",
-      "Secured the app with Firebase Authentication and Vercel KV (Redis) rate limiting, blocking abusive traffic before it reaches the backend.",
-      "Added Sentry error logging so production failures surface right away, cutting debugging time on the early-stage app."
+      "Eliminated a URL injection path in rendered sources by hardening the API trust boundary with a dependency-free validation layer that normalizes malformed backend responses before they render.",
+      "Instrumented Sentry across 25 error paths, turning silently swallowed catch blocks into tagged, source-mapped events — the app's first production error visibility.",
+      "Built Playwright verification scripts that drive the running app against a failing backend and report which of the 25 instrumented paths actually emit Sentry events, catching miswired instrumentation before an incident does."
     ],
-    "tech": "TypeScript, Node.js, Zod, Firebase Auth, Vercel KV (Redis), Sentry"
+    "tech": "TypeScript, Node.js, Sentry, Playwright"
   },
   {
     "key": "cafe-princess",
@@ -22,7 +22,7 @@
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
       "Worked directly with the owner to replace printed menus with a customer-facing online storefront for roughly 100 daily customers, built in React, TypeScript, and PostgreSQL.",
-      "Built a Supabase admin portal so staff can update menus, prices, and availability themselves — no developer needed for day-to-day changes.",
+      "Built a privilege-separated Supabase admin portal so staff can update menus, prices, and availability themselves without shared credentials — no developer needed for day-to-day changes.",
       "Cut image sizes by roughly 90% by converting to WebP, keeping page loads fast and the site inside the client's hosting budget."
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel"
@@ -39,5 +39,18 @@
       "Gathered accessibility requirements directly from the school's special-education staff, so students with disabilities could navigate and locate seats on their own."
     ],
     "tech": "Flutter, Dart"
+  },
+  {
+    "key": "chopsuey",
+    "role": "Team Lead & Backend Engineer",
+    "company": "ChopSuey",
+    "date": "",
+    "location": "Seneca Hackathon, Toronto",
+    "website": "",
+    "bullets": [
+      "Led a 5-person team, scoping the build into delivery phases so every part was in a working state when the clock ran out.",
+      "Owned the Node.js backend, resolving a product's country of origin from the Open Food Facts API with a templated GPT fallback for products the database didn't cover."
+    ],
+    "tech": "Node.js, Open Food Facts API, GPT"
   }
 ]

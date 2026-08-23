@@ -26,8 +26,8 @@
     "website": "",
     "title": "Fragments Microservice",
     "image": "/FragmentsMicroservices.webp",
-    "desc": "Cloud file service on AWS: stores and converts text, JSON, and images\nthrough a REST API, secured with Amazon Cognito logins.\nFiles live in S3, their details in DynamoDB for fast lookups.\nDockerized, with testing and deployment automated by GitHub Actions.",
-    "tech": "Node.js, Express, AWS (Cognito, DynamoDB, S3), Docker"
+    "desc": "Cloud file service on AWS: stores and converts text, JSON, and images\nthrough a REST API, with Amazon Cognito auth scoping reads and writes by owner.\nLeast-privilege IAM roles reach S3 and DynamoDB, keeping credentials out of source control.\nDockerized, with a GitHub Actions pipeline that blocks failing builds from deploy.",
+    "tech": "Node.js, Express, AWS (Cognito, IAM, DynamoDB, S3), Docker"
   },
   {
     "id": 3,
