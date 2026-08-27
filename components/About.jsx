@@ -60,7 +60,7 @@ export default function About() {
                   </li>
                   <li>
                     {" "}
-                    <span className="accent" aria-hidden="true">*</span> Flutter & Dart
+                    <span className="accent" aria-hidden="true">*</span> SQL & PostgreSQL
                   </li>
                   <li>
                     {" "}
