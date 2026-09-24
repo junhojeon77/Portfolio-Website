@@ -28,7 +28,7 @@ export default function About() {
               Toronto.
             </p>
             <p>
-              Graduating from{" "}
+              Graduated from{" "}
               <strong className="accent">Seneca</strong>&apos;s{" "}
               <strong className="accent">Computer Programming & Analysis</strong>{" "}
               program in August 2026, after a couple of freelance client work
