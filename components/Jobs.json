@@ -7,38 +7,27 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Closed an XSS vector in rendered source links by validating untrusted backend responses at the API client boundary, dropping any URL outside HTTP/HTTPS.",
-      "Instrumented Sentry across 25 error paths, turning silently swallowed catch blocks into tagged, source-mapped events — the app's first production error visibility.",
-      "Built Playwright verification scripts that drive the running app against a failing backend and report which of the 25 instrumented paths actually emit Sentry events, catching miswired instrumentation before an incident does."
+      "Migrated the backend from Vercel to Firebase Cloud Functions (14 API routes), moving API keys to Secret Manager and adding Redis-backed per-user and per-IP rate limits.",
+      "Built instant fit scoring for every job in a search using one batched embeddings call plus skill, experience and seniority checks, replacing ∼3 min of rate-limited LLM calls with ∼2 s.",
+      "Added error monitoring across the API with Sentry and structured Pino logging, recording failures from 12 route handlers as deduplicated, tagged error reports in an owner dashboard.",
+      "Closed an XSS vector in rendered source links by validating untrusted backend responses at the API client boundary, dropping any URL outside HTTP/HTTPS."
     ],
-    "tech": "TypeScript, Node.js, Sentry, Playwright"
+    "tech": "TypeScript, Node.js, Firebase Cloud Functions, Redis, Sentry, Pino"
   },
   {
-    "key": "cafe-princess",
-    "role": "Full Stack Developer (Freelance)",
-    "company": "Café Princess",
-    "date": "Feb 2026 – Jun 2026",
-    "location": "Toronto, ON",
+    "key": "freelance",
+    "role": "Software Developer",
+    "company": "Freelance",
+    "date": "Jun 2025 – Jun 2026",
+    "location": "Toronto, ON & Gyeonggi-do, KR",
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
-      "Worked directly with the owner to replace printed menus with a customer-facing online storefront for roughly 100 daily customers, built in React, TypeScript, and PostgreSQL.",
-      "Built a privilege-separated Supabase admin portal so staff can update menus, prices, and availability themselves without shared credentials — no developer needed for day-to-day changes.",
-      "Cut image sizes by roughly 90% by converting to WebP, keeping page loads fast and the site inside the client's hosting budget."
+      "Built a privilege-separated Supabase (PostgreSQL) admin portal for a cafe so staff updated prices without shared credentials.",
+      "Built a customer-facing storefront for a cafe in React, TypeScript, and PostgreSQL serving roughly 100 daily customers.",
+      "Cut image sizes by roughly 90% by converting to WebP, keeping page loads fast and the site inside the client's hosting budget.",
+      "Built a Flutter classroom app used by roughly 150 students, meeting teacher-specified accessibility requirements for independent navigation."
     ],
-    "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel"
-  },
-  {
-    "key": "sunjin",
-    "role": "Mobile Application Developer (Freelance)",
-    "company": "Sunjin School",
-    "date": "Jun 2025 – Jul 2025",
-    "location": "Gyeonggi-do, KR",
-    "website": "",
-    "bullets": [
-      "Built a Flutter app used by roughly 150 students to practice the steps of going to a cinema: buying a ticket, finding a seat, and navigating the building.",
-      "Gathered accessibility requirements directly from the school's special-education staff, so students with disabilities could navigate and locate seats on their own."
-    ],
-    "tech": "Flutter, Dart"
+    "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel, Flutter, Dart"
   },
   {
     "key": "chopsuey",

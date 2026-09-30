@@ -31,7 +31,7 @@ export default function About() {
               Graduated from{" "}
               <strong className="accent">Seneca</strong>&apos;s{" "}
               <strong className="accent">Computer Programming & Analysis</strong>{" "}
-              program in August 2026, after a couple of freelance client work
+              program in August 2026, after a year of freelance client work
               along the way.
             </p>
             <p>Technologies I work with most:</p>
@@ -71,7 +71,7 @@ export default function About() {
             </Row>
             <p>Outside of code: gaming, basketball, and the gym.</p>
             <p>
-              📩 Looking for my first full-time developer role. Let&apos;s
+              📩 Open to full-time developer roles. Let&apos;s
               connect:{" "}
               <a href="mailto:junhojeon88@gmail.com">junhojeon88@gmail.com</a>
             </p>
