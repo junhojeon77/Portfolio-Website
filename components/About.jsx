@@ -20,8 +20,7 @@ export default function About() {
               <strong className="accent">TypeScript</strong>, with a strong
               focus on code quality and things people actually use, like a
               storefront a Toronto café runs daily, an accessibility-first app
-              for elementary students, and a cloud API on AWS. Mostly
-              TypeScript, React, and Flutter, with Node and AWS behind them.
+              for elementary students, and a cloud API on AWS.
             </p>
             <p>
               Born in South Korea, raised in the Philippines, now based in
