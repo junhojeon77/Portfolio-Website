@@ -8,7 +8,7 @@
     "website": "",
     "bullets": [
       "Migrated the backend from Vercel to Firebase Cloud Functions (14 API routes), moving API keys to Secret Manager and adding Redis-backed per-user and per-IP rate limits.",
-      "Built instant fit scoring for every job in a search using one batched embeddings call plus skill, experience and seniority checks, replacing ∼3 min of rate-limited LLM calls with ∼2 s.",
+      "Built fit scoring for every job in a search using one batched embeddings call plus rule-based checks, replacing ∼3 min of rate-limited LLM calls with ∼2 s.",
       "Added error monitoring across the API with Sentry and structured Pino logging, recording failures from 12 route handlers as deduplicated, tagged error reports in an owner dashboard.",
       "Closed an XSS vector in rendered source links by validating untrusted backend responses at the API client boundary, dropping any URL outside HTTP/HTTPS."
     ],
@@ -24,11 +24,11 @@
     "bullets": [
       "Built a privilege-separated Supabase (PostgreSQL) admin portal for a cafe so staff updated prices without shared credentials.",
       "Built a customer-facing storefront for a cafe in React, TypeScript, and PostgreSQL serving roughly 100 daily customers.",
-      "Cut image sizes by roughly 90% by converting to WebP, keeping page loads fast and the site inside the client's hosting budget.",
       "Built a Flutter classroom app used by roughly 150 students, meeting teacher-specified accessibility requirements for independent navigation."
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel, Flutter, Dart"
   },
+
   {
     "key": "chopsuey",
     "role": "Team Lead & Backend Engineer",
