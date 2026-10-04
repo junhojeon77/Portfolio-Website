@@ -7,10 +7,10 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Migrated the backend from Vercel to Firebase Cloud Functions (14 API routes), moving API keys to Secret Manager and adding Redis-backed per-user and per-IP rate limits.",
-      "Built fit scoring for every job in a search using one batched embeddings call plus rule-based checks, replacing ∼3 min of rate-limited LLM calls with ∼2 s.",
-      "Added error monitoring across the API with Sentry and structured Pino logging, recording failures from 12 route handlers as deduplicated, tagged error reports in an owner dashboard.",
-      "Closed an XSS vector in rendered source links by validating untrusted backend responses at the API client boundary, dropping any URL outside HTTP/HTTPS."
+      "Migrated 14 API routes to Firebase Cloud Functions, moving API keys to Secret Manager and adding Redis-backed per-user and per-IP rate limits to prevent abusive traffic from overloading the server.",
+      "Built a semantic embedding matcher with rule-based checks that scores every result in a single batched call, replacing ∼3 min of rate-limited LLM calls with ∼2 s.",
+      "Added error monitoring with Sentry and structured Pino logging across 12 route handlers, surfacing failures in an owner dashboard before users could report them.",
+      "Closed an XSS vector in rendered source links by validating untrusted backend responses and rejecting non-HTTP(S) URLs, preventing malicious scripts from running in users’ browsers."
     ],
     "tech": "TypeScript, Node.js, Firebase Cloud Functions, Redis, Sentry, Pino"
   },
@@ -28,7 +28,6 @@
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel, Flutter, Dart"
   },
-
   {
     "key": "chopsuey",
     "role": "Team Lead & Backend Engineer",
