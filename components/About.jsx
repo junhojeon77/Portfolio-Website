@@ -15,9 +15,7 @@ export default function About() {
             <p className="fs-6">
               I&apos;m a full-stack developer familiar with RESTful APIs,
               microservices, event-driven architecture, and test-driven
-              development (TDD). I build end-to-end solutions with{" "}
-              <strong className="accent">React</strong> and{" "}
-              <strong className="accent">TypeScript</strong>, with a strong
+              development (TDD). I build end-to-end solutions with a strong
               focus on code quality and things people actually use, like a
               storefront a Toronto café runs daily, an accessibility-first app
               for elementary students, and a cloud API on AWS.
