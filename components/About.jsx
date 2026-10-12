@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import FadeInSection from "./hooks/FadeInSection";
 import AvailabilityBadge from "./AvailabilityBadge";
 
@@ -14,11 +15,14 @@ export default function About() {
             <AvailabilityBadge className="mb-4" />
             <p className="fs-6">
               I&apos;m a full-stack developer familiar with RESTful APIs,
-              microservices, event-driven architecture, and test-driven
-              development (TDD). I build end-to-end solutions with a strong
-              focus on code quality and things people actually use, like a
-              storefront a Toronto café runs daily, an accessibility-first app
-              for elementary students, and a cloud API on AWS.
+              microservices, and test-driven development (TDD). I build
+              end-to-end solutions with a strong focus on code quality and
+              things people actually use.
+            </p>
+            <p>
+              Currently contracting at{" "}
+              <strong className="accent">Villen Technologies</strong>, building
+              AI response validation and hardening backend APIs.
             </p>
             <p>
               Born in South Korea, raised in the Philippines, now based in
@@ -66,7 +70,19 @@ export default function About() {
                 </ul>
               </Col>
             </Row>
-            <p>Outside of code: gaming, basketball, and the gym.</p>
+            <p>
+              I also make content about what I&apos;m building and the video
+              games I play:{" "}
+              <a
+                href="https://beacons.ai/junhuun"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-primary text-decoration-underline d-inline-flex align-items-center gap-1"
+              >
+                beacons.ai/junhuun <FaExternalLinkAlt aria-hidden="true" />
+              </a>
+            </p>
+            <p>Outside of code: gaming(overwatch, league of legends), basketball, and the gym.</p>
             <p>
               📩 Open to full-time developer roles. Let&apos;s
               connect:{" "}

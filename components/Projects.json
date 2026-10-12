@@ -6,7 +6,7 @@
     "website": "",
     "title": "Smart Stock",
     "image": "/SmartStock.png",
-    "desc": "Restaurant inventory app built with a 4-person Agile team, replacing spreadsheet tracking with live stock levels, low-stock and expiry alerts, and waste trends. I built the Next.js frontend with role-based access for owners, managers, and staff, connected to a separate Flask backend that serves all data behind JWT authentication. Also includes demand forecasting and supplier price comparison, so owners order the right amount at the best price.",
+    "desc": "Restaurant inventory app built with a 4-person Agile team, replacing spreadsheet tracking with live stock levels, low-stock and expiry alerts, and waste trends. ",
     "tech": "TypeScript, Next.js, Tailwind, Flask API, JWT"
   },
   {

@@ -25,13 +25,13 @@ export default function Hero() {
         </h1>
         <FadeInSection>
           <p className="text-center card-subtitle fs-3 mt-2">
-            I build apps so I never have to do it twice
+            I like working on apps that can make my life easier
           </p>
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
               <p className="mt-3 fs-6 card-subtitle">
-                I build end-to-end solutions with React and TypeScript, with a
-                strong focus on code quality and things people actually use.
+                I like learning ways to build lazy solutions to complex problems.
+                born in Korea, raised in the Philippines, and now based in Toronto. 
               </p>
             </Col>
           </Row>

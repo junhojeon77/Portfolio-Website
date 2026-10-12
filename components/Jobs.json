@@ -7,12 +7,13 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Migrated 14 API routes to Firebase Cloud Functions, moving API keys to Secret Manager and adding Redis-backed per-user and per-IP rate limits to prevent abusive traffic from overloading the server.",
-      "Built a semantic embedding matcher with rule-based checks that scores every result in a single batched call, replacing ∼3 min of rate-limited LLM calls with ∼2 s.",
-      "Added error monitoring with Sentry and structured Pino logging across 12 route handlers, surfacing failures in an owner dashboard before users could report them.",
-      "Closed an XSS vector in rendered source links by validating untrusted backend responses and rejecting non-HTTP(S) URLs, preventing malicious scripts from running in users’ browsers."
+      "Architected an AI validation gate that checks every model response against a strict Zod schema, automatically rejecting and retrying outputs with missing fields, invalid values, or hallucinated content so only complete, correctly structured answers reach users.",
+      "Cut result-matching time from ∼3 min to ∼2 s (∼90x faster) by replacing a chain of rate-limited LLM calls with a semantic embedding matcher and rule-based checks that score every result in a single batched call.",
+      "Hardened the backend by migrating 14 API routes to Firebase Cloud Functions, moving API keys out of application code into Secret Manager, and adding Redis-backed per-user and per-IP rate limits to block abusive traffic before it could overload the server.",
+      "Closed a cross-site scripting (XSS) vulnerability in rendered source links by validating untrusted backend responses and rejecting non-HTTP(S) URLs, preventing malicious scripts from running in users’ browsers.",
+      "Gave the team real-time visibility into production failures by adding Sentry error monitoring and structured Pino logging across 12 route handlers, surfacing issues in an owner dashboard so bugs were caught before users reported them."
     ],
-    "tech": "TypeScript, Node.js, Firebase Cloud Functions, Redis, Sentry, Pino"
+    "tech": "TypeScript, Node.js, Firebase Cloud Functions, Redis, Zod, Sentry, Pino"
   },
   {
     "key": "freelance",
@@ -22,23 +23,10 @@
     "location": "Toronto, ON & Gyeonggi-do, KR",
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
-      "Built a privilege-separated Supabase (PostgreSQL) admin portal for a cafe so staff updated prices without shared credentials.",
-      "Built a customer-facing storefront for a cafe in React, TypeScript, and PostgreSQL serving roughly 100 daily customers.",
+      "Built a privilege-separated Supabase (PostgreSQL) admin portal for a cafe so staff can update prices without contacting a developer.",
+      "Built a customer-facing storefront for a cafe in React, TypeScript, and PostgreSQL serving roughly 1000 weekly customers.",
       "Built a Flutter classroom app used by roughly 150 students, meeting teacher-specified accessibility requirements for independent navigation."
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel, Flutter, Dart"
-  },
-  {
-    "key": "chopsuey",
-    "role": "Team Lead & Backend Engineer",
-    "company": "ChopSuey",
-    "date": "",
-    "location": "Seneca Hackathon, Toronto",
-    "website": "",
-    "bullets": [
-      "Led a 5-person team, scoping the build into delivery phases so every part was in a working state when the clock ran out.",
-      "Owned the Node.js backend, resolving a product's country of origin from the Open Food Facts API with a templated GPT fallback for products the database didn't cover."
-    ],
-    "tech": "Node.js, Open Food Facts API, GPT"
   }
 ]
