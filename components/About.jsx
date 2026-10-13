@@ -74,12 +74,12 @@ export default function About() {
               I also make content about what I&apos;m building and the video
               games I play:{" "}
               <a
-                href="https://beacons.ai/junhuun"
+                href="https://beacons.ai/junhj4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-primary text-decoration-underline d-inline-flex align-items-center gap-1"
               >
-                beacons.ai/junhuun <FaExternalLinkAlt aria-hidden="true" />
+                beacons.ai/junhj4 <FaExternalLinkAlt aria-hidden="true" />
               </a>
             </p>
             <p>Outside of code: gaming(overwatch, league of legends), basketball, and the gym.</p>
