@@ -5,6 +5,7 @@ import { ReactTyped } from "react-typed";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaEnvelope } from "react-icons/fa";
 import FadeInSection from "@/components/hooks/FadeInSection";
+import ResumeIntro from "@/components/ResumeIntro";
 
 export default function Hero() {
   return (
@@ -36,12 +37,15 @@ export default function Hero() {
             </Col>
           </Row>
 
-          <a
-            href="mailto:junhojeon88@gmail.com"
-            className="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2 mt-4 fade-up fw-bold"
-          >
-            <FaEnvelope aria-hidden="true" /> Email Me
-          </a>
+          <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
+            <a
+              href="mailto:junhojeon88@gmail.com"
+              className="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2 fw-bold"
+            >
+              <FaEnvelope aria-hidden="true" /> Email Me
+            </a>
+            <ResumeIntro />
+          </div>
         </FadeInSection>
       </Container>
     </>

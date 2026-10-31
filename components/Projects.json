@@ -12,8 +12,8 @@
   {
     "id": 1,
     "featured": true,
-    "github": "https://github.com/junhojeon77/job-match",
-    "website": "https://job-match-gray.vercel.app/",
+    "github": "",
+    "website": "https://joblume.net/",
     "title": "JobMatch",
     "image": "/jobmatch.webp",
     "desc": "Reads a résumé into a structured profile with the OpenAI API,\nautomatically retrying whenever the AI returns invalid data.\nRate limiting and caching keep it reliable at zero hosting cost.\nCuts tailoring and submitting an application from ~30 minutes to under one.",

@@ -7,13 +7,11 @@
     "location": "Remote",
     "website": "",
     "bullets": [
-      "Developed an AI job-matching service that reads resumes, finds relevant job listings, and shows fit scores with explanations.",
-      "Reduced processing time for resume parsing, job search, and fit scoring from approximately 3 minutes to 3 seconds by replacing sequential LLM matching calls with embedding-based matching and rule-based checks.",
-      "Migrated 14 API routes from Vercel to Firebase Cloud Functions to adopt the company's preferred platform, and built a GitHub Actions CI/CD pipeline with automated test checks and deployment.",
-      "Implemented Zod validation for required fields and score ranges, retried malformed responses and recoverable errors, and displayed an explanatory message when API usage limits were reached.",
-      "Moved API keys into Secret Manager and added Redis-backed request limits per user and IP address to restrict excessive requests.",
-      "Closed an XSS vulnerability in source-link rendering by validating backend-provided URLs and allowing only HTTP(S) schemes.",
-      "Added Sentry error monitoring and structured Pino logging across 12 route handlers to support production failure detection and debugging."
+      "Built an AI job-matching service with resume parsing, relevant listings, and explained fit scores; reduced processing from approximately 3 minutes to 3 seconds using embeddings and rule-based checks.",
+      "Migrated 14 API routes from Vercel to Firebase Cloud Functions and automated testing and deployment with GitHub Actions.",
+      "Validated AI responses with Zod, retried malformed responses and recoverable errors, and added clear API usage-limit messages.",
+      "Secured API keys with Secret Manager, added Redis rate limits per user and IP, and fixed an XSS vulnerability by restricting source links to HTTP(S).",
+      "Added Sentry monitoring and structured Pino logging across 12 route handlers to diagnose production failures."
     ],
     "tech": "TypeScript, Node.js, Firebase Cloud Functions, Redis, Zod, Sentry, Pino"
   },
@@ -25,10 +23,9 @@
     "location": "Toronto, ON & Gyeonggi-do, KR",
     "website": "https://cafe-princess.vercel.app/",
     "bullets": [
-      "Delivered web and mobile applications for cafe staff, customers, and students using React, TypeScript, PostgreSQL, and Flutter.",
-      "Built a Supabase/PostgreSQL admin portal with separate administrative access so cafe staff could update prices without developer assistance.",
-      "Developed a customer-facing storefront in React and TypeScript for a cafe serving approximately 1,000 customers weekly.",
-      "Delivered a Flutter classroom application used by approximately 150 students, implementing teacher-defined accessibility requirements to support independent navigation."
+      "Delivered web and mobile apps for cafe staff, customers, and students using React, TypeScript, PostgreSQL, and Flutter.",
+      "Built a React and TypeScript storefront for a cafe serving approximately 1,000 customers weekly, plus a Supabase/PostgreSQL admin portal so staff could update prices independently.",
+      "Delivered a Flutter classroom app for approximately 150 students, implementing teacher-defined accessibility requirements for independent navigation."
     ],
     "tech": "React 18, TypeScript, Tailwind CSS, Supabase, Node.js, Vercel, Flutter, Dart"
   }
