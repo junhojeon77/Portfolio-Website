@@ -15,7 +15,7 @@ export default function About() {
             <AvailabilityBadge className="mb-4" />
             <p className="fs-6">
               I&apos;m a full-stack developer familiar with RESTful APIs,
-              microservices, and test-driven development (TDD). I build
+              microservices, AI integrations, and test-driven development (TDD). I build
               end-to-end solutions with a strong focus on code quality and
               things people actually use.
             </p>
