@@ -77,7 +77,8 @@ export default function ResumeIntro() {
     event.preventDefault();
     if (phaseRef.current !== "closed") return;
     setMuted(false);
-    transition(window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "viewing" : "playing");
+    transition("viewing");
+    // transition(window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "viewing" : "playing");
   }
 
   return (
@@ -111,13 +112,14 @@ export default function ResumeIntro() {
           </div>
         </Modal.Header>
         <Modal.Body className="resume-intro-stage p-0">
+          
           <div className="resume-reveal" inert={!viewing} aria-hidden={!viewing}>
             <div className="resume-scroll" tabIndex={viewing ? 0 : -1} role="region" aria-label="Resume pages">
               {show && <ViewerBoundary><ResumeViewer file={RESUME_URL} /></ViewerBoundary>}
             </div>
           </div>
-          {show && !viewing && <GenjiIntro onSlash={revealResume} onSkip={showResume}
-            muted={muted} onMuteChange={setMuted} />}
+          {/* {show && !viewing && <GenjiIntro onSlash={revealResume} onSkip={showResume}
+            muted={muted} onMuteChange={setMuted} />} */}
           <span className="visually-hidden" role="status">{viewing ? "Resume viewer open." : ""}</span>
         </Modal.Body>
       </Modal>
