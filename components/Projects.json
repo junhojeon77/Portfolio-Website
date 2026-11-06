@@ -2,21 +2,21 @@
   {
     "id": 6,
     "featured": false,
-    "github": "",
+    "github": "https://github.com/junhojeon77/smartstock-front",
     "website": "",
-    "title": "Smart Stock",
+    "title": "SmartStock",
     "image": "/SmartStock.png",
-    "desc": "Restaurant inventory app built with a 4-person Agile team, replacing spreadsheet tracking with live stock levels, low-stock and expiry alerts, and waste trends. ",
-    "tech": "TypeScript, Next.js, Tailwind, Flask API, JWT"
+    "desc": "Inventory app built with a four-person Agile team. Developed the Next.js and Tailwind frontend, integrated a Python Flask REST API, and implemented JWT-based role checks and protected routes to enforce user permissions.",
+    "tech": "TypeScript, Next.js, Tailwind, Flask, JWT"
   },
   {
     "id": 1,
     "featured": true,
     "github": "",
-    "website": "https://joblume.net/",
+    "website": "https://joblume.net/welcome",
     "title": "JobMatch",
     "image": "/jobmatch.webp",
-    "desc": "Reads a résumé into a structured profile with the OpenAI API,\nautomatically retrying whenever the AI returns invalid data.\nRate limiting and caching keep it reliable at zero hosting cost.\nCuts tailoring and submitting an application from ~30 minutes to under one.",
+    "desc": "TypeScript and Next.js app for tailoring resumes and assessing job fit with the OpenAI API.\nValidates AI responses with Zod and automatically retries invalid outputs.\nAutomates resume tailoring and job matching with processing times under one minute.",
     "tech": "TypeScript, Next.js, Node.js, OpenAI API, Zod"
   },
   {
@@ -26,8 +26,8 @@
     "website": "",
     "title": "Fragments Microservice",
     "image": "/FragmentsMicroservices.webp",
-    "desc": "Cloud file service on AWS: stores and converts text, JSON, and images\nthrough a REST API, with Amazon Cognito auth scoping reads and writes by owner.\nLeast-privilege IAM roles reach S3 and DynamoDB, keeping credentials out of source control.\nDockerized, with a GitHub Actions pipeline that blocks failing builds from deploy.",
-    "tech": "Node.js, Express, AWS (Cognito, IAM, DynamoDB, S3), Docker"
+    "desc": "Node.js and Express REST API on AWS for signing in, saving small pieces of data, and retrieving them later.\nRestricts reads and writes to each authenticated owner, with scoped IAM permissions for S3 and DynamoDB.\nContainerized with Docker; GitHub Actions runs builds and tests before deployment.",
+    "tech": "Node.js, Express, AWS (IAM, DynamoDB, S3), Docker"
   },
   {
     "id": 3,
