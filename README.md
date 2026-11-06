@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-The personal site of Jun Ho Jeon — a freelance full-stack developer in Toronto.
+The personal site of Junho Jeon — a software developer in Toronto building web and mobile apps, backend APIs, and AI integrations.
 Built with the Next.js App Router and React Bootstrap.
 
 ## Features
@@ -22,27 +22,3 @@ Built with the Next.js App Router and React Bootstrap.
 - **Animation**: Canvas 2D + `requestAnimationFrame`, React Typed
 - **Icons**: React Icons
 - **Analytics**: Vercel Analytics
-
-## Development
-
-```bash
-npm install
-npm run dev     # http://localhost:3000
-npm run lint
-npm run build
-```
-
-## Structure
-
-```
-app/            layout, page, global CSS (theme variables live here)
-components/     one file per section, plus Projects.json as the content source
-components/hooks/  FadeInSection, useIsMobile
-public/         images (WebP) and resume PDF
-```
-
-## 🧾 License
-
-This project is licensed under the [MIT License](./LICENSE)
-
-© 2025 Jun ho Jeon. All rights reserved.
