@@ -4,7 +4,7 @@ import { Component, useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { Button, Modal } from "react-bootstrap";
 import { FaFilePdf } from "react-icons/fa";
-import GenjiIntro from "./GenjiIntro";
+// import GenjiIntro from "./GenjiIntro";
 
 const RESUME_URL = "/Junho-Jeon-Resume.pdf";
 const ResumeViewer = dynamic(() => import("./ResumeViewer"), {
@@ -26,7 +26,7 @@ export default function ResumeIntro() {
   const [phase, setPhase] = useState("closed");
   const [muted, setMuted] = useState(false);
   const phaseRef = useRef("closed");
-  const revealTimer = useRef(null);
+  // const revealTimer = useRef(null);
   const openLinkRef = useRef(null);
   const skipRef = useRef(null);
   const focusViewerRef = useRef(false);
@@ -39,22 +39,23 @@ export default function ResumeIntro() {
   }, []);
 
   const closeIntro = useCallback(() => {
-    clearTimeout(revealTimer.current);
+    // clearTimeout(revealTimer.current);
     transition("closed");
   }, [transition]);
 
   const showResume = useCallback(() => {
     if (phaseRef.current === "closed" || phaseRef.current === "viewing") return;
     focusViewerRef.current = document.activeElement === skipRef.current || document.activeElement?.dataset.introMute === "true";
-    clearTimeout(revealTimer.current);
+    // clearTimeout(revealTimer.current);
     transition("viewing");
   }, [transition]);
 
-  const revealResume = useCallback(() => {
-    if (phaseRef.current !== "playing") return;
-    transition("revealing");
-    revealTimer.current = setTimeout(showResume, 450);
-  }, [transition, showResume]);
+  // Intro animation is temporarily disabled; keep this callback for restoring it.
+  // const revealResume = useCallback(() => {
+  //   if (phaseRef.current !== "playing") return;
+  //   transition("revealing");
+  //   revealTimer.current = setTimeout(showResume, 450);
+  // }, [transition, showResume]);
 
   useEffect(() => {
     if (!show) return;
@@ -62,7 +63,7 @@ export default function ResumeIntro() {
     const changed = event => { if (event.matches) showResume(); };
     preference.addEventListener("change", changed);
     return () => {
-      clearTimeout(revealTimer.current);
+      // clearTimeout(revealTimer.current);
       preference.removeEventListener("change", changed);
     };
   }, [show, showResume]);
@@ -77,6 +78,7 @@ export default function ResumeIntro() {
     event.preventDefault();
     if (phaseRef.current !== "closed") return;
     setMuted(false);
+    // Open the PDF viewer directly while the intro animation is disabled.
     transition("viewing");
     // transition(window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "viewing" : "playing");
   }
