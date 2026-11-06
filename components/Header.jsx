@@ -11,7 +11,7 @@ export default function Header() {
     <Navbar expand="lg" className="nav_collapse" fixed="top">
       <Container>
         <Navbar.Brand href="#home" className="fs-6 ps-2">
-          Jun Ho Jeon
+          Junho Jeon
         </Navbar.Brand>
 
 
@@ -55,7 +55,7 @@ export default function Header() {
               <FaGithub size={20} aria-hidden="true" />
             </Nav.Link>
             <Nav.Link
-              href="https://www.linkedin.com/in/jun-ho-jeon-a08060252"
+              href="https://www.linkedin.com/in/junho-jeon-a08060252"
               target="_blank"
               rel="noopener noreferrer"
               className="fs-8"

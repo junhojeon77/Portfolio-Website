@@ -26,13 +26,14 @@ export default function Hero() {
         </h1>
         <FadeInSection>
           <p className="text-center card-subtitle fs-3 mt-2">
-            I like working on apps that can make my life easier
+            I build apps that make everyday life easier
           </p>
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
               <p className="mt-3 fs-6 card-subtitle">
-                I like learning ways to build lazy solutions to complex problems.
-                born in Korea, raised in the Philippines, and now based in Toronto. 
+                I&apos;m a software developer in Toronto working on web and mobile
+                apps, backend APIs, and AI integrations. I like finding simple
+                solutions to complex problems.
               </p>
             </Col>
           </Row>

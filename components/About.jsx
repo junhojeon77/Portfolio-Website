@@ -14,26 +14,25 @@ export default function About() {
             <h2 className="mb-3 fs-1">/ about</h2>
             <AvailabilityBadge className="mb-4" />
             <p className="fs-6">
-              I&apos;m a full-stack developer familiar with RESTful APIs,
-              microservices, AI integrations, and test-driven development (TDD). I build
-              end-to-end solutions with a strong focus on code quality and
-              things people actually use.
+              I&apos;m a software developer building web and mobile apps,
+              backend APIs, and AI integrations. I like turning complex problems
+              into practical tools people actually use.
             </p>
             <p>
-              Currently contracting at{" "}
-              <strong className="accent">Villen Technologies</strong>, building
-              AI response validation and hardening backend APIs.
+              Most recently, I worked as a Junior Software Developer on contract
+              at <strong className="accent">Villen Technologies</strong> from
+              June to October 2026, building an AI job-matching service and
+              improving backend reliability and security. Before that, I built
+              web and mobile apps for freelance clients.
             </p>
             <p>
               Born in South Korea, raised in the Philippines, now based in
               Toronto.
             </p>
             <p>
-              Graduated from{" "}
-              <strong className="accent">Seneca</strong>&apos;s{" "}
-              <strong className="accent">Computer Programming & Analysis</strong>{" "}
-              program in August 2026, after a year of freelance client work
-              along the way.
+              Graduated from <strong className="accent">Seneca Polytechnic</strong>{" "}
+              in August 2026 with an{" "}
+              <strong className="accent">Advanced Diploma in Computer Programming & Analysis</strong>.
             </p>
             <p>Technologies I work with most:</p>
             <Row>
@@ -116,7 +115,7 @@ export default function About() {
           <FadeInSection>
             <Image
               src="/me.jpeg"
-              alt="Portrait of Jun Ho Jeon"
+              alt="Portrait of Junho Jeon"
               width={800}
               height={1000}
               className="rounded-4 shadow"

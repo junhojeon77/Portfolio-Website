@@ -11,14 +11,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-website-junhojeon77.vercel.app"),
-  title: "Jun Ho Jeon — Full Stack Developer",
+  metadataBase: new URL("https://junhj.vercel.app/"),
+  title: "Junho Jeon — Software Developer",
   description:
-    "Portfolio of Jun Ho Jeon, a full stack developer in Toronto bridging software development with AI/ML.",
+    "Portfolio of Junho Jeon, a software developer in Toronto building web and mobile apps, backend APIs, and AI integrations. Open to full-time developer roles.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Jun Ho Jeon — Full Stack Developer",
+    title: "Junho Jeon — Software Developer",
     description:
-      "Portfolio of Jun Ho Jeon, a full stack developer in Toronto shipping production React, TypeScript, and Flutter work — seeking junior full-stack roles in the GTA.",
+      "Portfolio of Junho Jeon, a software developer in Toronto building web and mobile apps, backend APIs, and AI integrations. Open to full-time developer roles.",
+    url: "/",
     type: "website",
     images: ["/me.jpeg"],
   },
