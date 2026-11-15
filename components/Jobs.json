@@ -4,15 +4,15 @@
     "role": "Junior Software Developer (Contract)",
     "company": "Villen Technologies",
     "date": "Jun 2026 – Oct 2026",
-    "location": "Remote",
+    "location": "Arkansas, US (Remote)",
     "website": "",
     "bullets": [
       "Developed an AI job-matching service that analyzed resumes, identified relevant job listings, and explained how well candidates matched each position.",
       "Reduced resume processing and job-matching time from approximately 3 minutes to 3 seconds by replacing sequential LLM calls with embedding-based semantic search and rule-based checks.",
-      "Improved LLM response reliability with Zod schema validation and automated retries to reject malformed outputs and handle recoverable API errors.",
+      "Improved LLM response reliability using Zod schema validation and automated retries to reject malformed outputs and handle recoverable API errors.",
       "Migrated 14 REST API routes from Vercel to Firebase Cloud Functions and automated testing and deployment through GitHub Actions to meet company infrastructure requirements.",
-      "Secured backend APIs with Secret Manager and Redis rate limiting to protect credentials, restrict excessive requests, and mitigate XSS vulnerabilities.",
-      "Implemented Sentry monitoring and Pino structured logging across 12 API handlers to detect errors and support troubleshooting."
+      "Secured backend APIs using Secret Manager and Redis rate limiting to protect credentials, restrict excessive requests, and mitigate XSS vulnerabilities.",
+      "Implemented production monitoring using Sentry and Pino structured logging across 12 API handlers to detect errors and support troubleshooting."
     ],
     "tech": "TypeScript, Node.js, Firebase Cloud Functions, Redis, Zod, Sentry, Pino"
   },

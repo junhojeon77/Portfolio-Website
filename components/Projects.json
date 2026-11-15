@@ -1,5 +1,15 @@
 [
   {
+    "id": 7,
+    "featured": true,
+    "github": "https://github.com/junhojeon77/AgentForge",
+    "website": "",
+    "title": "AgentForge",
+    "image": "/agentforge.webp",
+    "desc": "Open-source, local-first Windows desktop app where a lead agent coordinates up to five specialized AI coding agents.\nA deterministic asyncio scheduler dispatches task graphs, isolates each agent in a Git worktree, and validates results with the project's own tests.\nRetries, pause/resume and crash recovery backed by SQLite, with human approval before any agent change is merged.",
+    "tech": "Python, FastAPI, SQLite, asyncio, Tauri, React, TypeScript"
+  },
+  {
     "id": 6,
     "featured": false,
     "github": "https://github.com/junhojeon77/smartstock-front",
