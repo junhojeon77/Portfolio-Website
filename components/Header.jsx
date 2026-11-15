@@ -8,7 +8,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
-    <Navbar expand="lg" className="nav_collapse" fixed="top">
+    <Navbar expand="lg" className="nav_collapse" fixed="top" collapseOnSelect>
       <Container>
         <Navbar.Brand href="#home" className="fs-6 ps-2">
           Junho Jeon

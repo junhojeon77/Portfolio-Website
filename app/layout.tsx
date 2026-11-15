@@ -10,18 +10,20 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const title = "Junho Jeon — Software Developer";
+const description =
+  "Portfolio of Junho Jeon, a software developer in Toronto building web and mobile apps, backend APIs, and AI integrations. Open to full-time developer roles.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://junhj.vercel.app/"),
-  title: "Junho Jeon — Software Developer",
-  description:
-    "Portfolio of Junho Jeon, a software developer in Toronto building web and mobile apps, backend APIs, and AI integrations. Open to full-time developer roles.",
+  title,
+  description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Junho Jeon — Software Developer",
-    description:
-      "Portfolio of Junho Jeon, a software developer in Toronto building web and mobile apps, backend APIs, and AI integrations. Open to full-time developer roles.",
+    title,
+    description,
     url: "/",
     type: "website",
     images: ["/me.jpeg"],
@@ -43,7 +45,7 @@ export default function RootLayout({
             fallback (and only keeps tracking while there's no stored choice) */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)');var s=function(){document.documentElement.setAttribute('data-bs-theme',t||(m.matches?'dark':'light'))};s();if(!t)m.addEventListener('change',s)})();`,
+            __html: `(function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}var m=window.matchMedia('(prefers-color-scheme: dark)');var s=function(){document.documentElement.setAttribute('data-bs-theme',t||(m.matches?'dark':'light'))};s();if(!t)m.addEventListener('change',s)})();`,
           }}
         />
         <a href="#main-content" className="skip-link">
