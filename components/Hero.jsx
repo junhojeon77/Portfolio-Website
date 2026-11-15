@@ -13,7 +13,7 @@ export default function Hero() {
       <Container className="d-flex flex-column justify-content-center align-items-center text-center">
         <AsciiArt />
         <p className="text-secondary fs-8 mt-1">
-          (psst — touch me!)
+          Hover or tap the portrait.
         </p>
         <h1 className="text-center mt-2 display-4">
           <ReactTyped
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
             <a
               href="mailto:junhojeon88@gmail.com"
-              className="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2 fw-bold"
+              className="btn btn-dark btn-lg d-inline-flex align-items-center gap-2 fw-bold"
             >
               <FaEnvelope aria-hidden="true" /> Email Me
             </a>

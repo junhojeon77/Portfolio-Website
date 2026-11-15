@@ -215,14 +215,23 @@ export default function AsciiArt() {
       mouse.y = -9999;
       start();
     };
+    const onRelease = (event) => {
+      if (event.pointerType === "touch") onLeave();
+    };
     // pointer events cover mouse, touch, and stylus alike
+    canvas.addEventListener("pointerdown", onMove);
     canvas.addEventListener("pointermove", onMove);
     canvas.addEventListener("pointerleave", onLeave);
+    canvas.addEventListener("pointercancel", onLeave);
+    canvas.addEventListener("pointerup", onRelease);
 
     return () => {
       if (frameId !== null) cancelAnimationFrame(frameId);
+      canvas.removeEventListener("pointerdown", onMove);
       canvas.removeEventListener("pointermove", onMove);
       canvas.removeEventListener("pointerleave", onLeave);
+      canvas.removeEventListener("pointercancel", onLeave);
+      canvas.removeEventListener("pointerup", onRelease);
       window.removeEventListener("resize", onResize);
       themeObserver.disconnect();
     };

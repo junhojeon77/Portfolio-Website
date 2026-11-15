@@ -18,6 +18,7 @@ export default function About() {
               backend APIs, and AI integrations. I like turning complex problems
               into practical tools people actually use.
             </p>
+            <h3 className="about-subheading">Experience</h3>
             <p>
               Most recently, I worked as a Junior Software Developer on contract
               at <strong className="accent">Villen Technologies</strong> from
@@ -25,16 +26,13 @@ export default function About() {
               improving backend reliability and security. Before that, I built
               web and mobile apps for freelance clients.
             </p>
-            <p>
-              Born in South Korea, raised in the Philippines, now based in
-              Toronto.
-            </p>
+            <h3 className="about-subheading">Education</h3>
             <p>
               Graduated from <strong className="accent">Seneca Polytechnic</strong>{" "}
               in August 2026 with an{" "}
               <strong className="accent">Advanced Diploma in Computer Programming & Analysis</strong>.
             </p>
-            <p>Technologies I work with most:</p>
+            <h3 className="about-subheading">Technologies I work with most</h3>
             <Row>
               <Col xs={6}>
                 <ul className="list-unstyled">
@@ -69,19 +67,26 @@ export default function About() {
                 </ul>
               </Col>
             </Row>
-            <p>
-              I also make content about what I&apos;m building and the video
-              games I play:{" "}
-              <a
-                href="https://beacons.ai/junhj4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-primary text-decoration-underline d-inline-flex align-items-center gap-1"
-              >
-                beacons.ai/junhj4 <FaExternalLinkAlt aria-hidden="true" />
-              </a>
-            </p>
-            <p>Outside of code: gaming(overwatch, league of legends), basketball, and the gym.</p>
+            <div className="text-secondary">
+              <h3 className="about-subheading">Beyond code</h3>
+              <p>
+                Born in South Korea, raised in the Philippines, now based in
+                Toronto.
+              </p>
+              <p>
+                I also make content about what I&apos;m building and the video
+                games I play:{" "}
+                <a
+                  href="https://beacons.ai/junhj4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-primary text-decoration-underline d-inline-flex align-items-center gap-1"
+                >
+                  beacons.ai/junhj4 <FaExternalLinkAlt aria-hidden="true" />
+                </a>
+              </p>
+              <p>Outside of code: gaming (Overwatch and League of Legends), basketball, and the gym.</p>
+            </div>
             <p>
               📩 Open to full-time developer roles. Let&apos;s
               connect:{" "}

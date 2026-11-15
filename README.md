@@ -11,8 +11,8 @@ Built with the Next.js App Router and React Bootstrap.
   static art.
 - **Light and dark themes** — a toggle in the header, persisted to `localStorage`,
   falling back to the OS preference. Applied before first paint, so there's no flash.
-- **Responsive projects section** — a carousel of featured work on desktop, a single
-  column of cards on mobile, both driven by one `Projects.json`.
+- **Responsive projects section** — a featured carousel on desktop and a single
+  column of all projects on mobile, with labelled code and demo links, driven by one `Projects.json`.
 - Scroll-triggered fade-ins, typed hero heading, and `next/image` optimization.
 
 ## Tech

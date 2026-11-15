@@ -1,12 +1,42 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 
+const sections = ["home", "about", "experience", "projects"];
+
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    let frame = null;
+    const update = () => {
+      frame = null;
+      let current = "home";
+      const marker = window.innerHeight * 0.25;
+      for (const id of sections) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= marker) current = id;
+      }
+      setActiveSection(current);
+    };
+    const scheduleUpdate = () => {
+      if (frame === null) frame = requestAnimationFrame(update);
+    };
+    scheduleUpdate();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      if (frame !== null) cancelAnimationFrame(frame);
+    };
+  }, []);
+
   return (
     <Navbar expand="lg" className="nav_collapse" fixed="top" collapseOnSelect>
       <Container>
@@ -20,19 +50,18 @@ export default function Header() {
 
         {/* Navbar Links */}
         <Navbar.Collapse id="main-navbar" className="nav_collapse text-center">
-          <Nav className="mask-left">
-            <Nav.Link className="fs-8" href="#home">
-              Home
-            </Nav.Link>
-            <Nav.Link className="fs-8" href="#about">
-              About
-            </Nav.Link>
-            <Nav.Link className="fs-8" href="#experience">
-              Experience
-            </Nav.Link>
-            <Nav.Link className="fs-8" href="#projects">
-              Projects
-            </Nav.Link>
+          <Nav className="mask-left section-nav">
+            {sections.map((id) => (
+              <Nav.Link
+                key={id}
+                className="fs-8"
+                href={`#${id}`}
+                active={activeSection === id}
+                aria-current={activeSection === id ? "location" : undefined}
+              >
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </Nav.Link>
+            ))}
           </Nav>
 
           {/* Logos */}
