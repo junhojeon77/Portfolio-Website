@@ -56,7 +56,7 @@ export default function About() {
                 <ul className="list-unstyled">
                   <li>
                     {" "}
-                    <span className="accent" aria-hidden="true">*</span> Python
+                    <span className="accent" aria-hidden="true">*</span> Python & FastAPI
                   </li>
                   <li>
                     {" "}
