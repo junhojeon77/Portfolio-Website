@@ -3,7 +3,6 @@ import { Analytics } from "@vercel/analytics/next";
 import SpotifyPlayer from "../components/SpotifyPlayer";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@fontsource/fira-code";
 import "./globals.css";
 
 const inter = Inter({
