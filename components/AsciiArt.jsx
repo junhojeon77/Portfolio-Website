@@ -86,13 +86,11 @@ export default function AsciiArt() {
     const mouse = { x: -9999, y: -9999 };
     let particles = [];
 
+    // .hero-art is sized by CSS (the screen height left over by the hero text),
+    // so the portrait scales to fill it without ever spilling past the screen
+    const box = canvas.parentElement;
     const setup = (scatter = false) => {
-      const maxW = canvas.parentElement.clientWidth;
-      // phones: cap the portrait at ~30% of the viewport so the heading, bio
-      // and CTA still fit under the fixed navbar. Desktop stays width-driven —
-      // half a desktop viewport height clears the 7px cap anyway.
-      const budget = window.innerHeight * (window.innerWidth < 768 ? 0.3 : 0.5);
-      const fontSize = Math.max(3, Math.min(7, maxW / (cols * 0.6), budget / rows));
+      const fontSize = Math.min(box.clientWidth / (cols * 0.6), box.clientHeight / rows);
       const charW = fontSize * 0.6; // Fira Code advance width
       const lineH = fontSize;
       const dpr = window.devicePixelRatio || 1;
@@ -125,28 +123,38 @@ export default function AsciiArt() {
       });
     };
 
+    // .ascii-art sets color: var(--ascii); re-read only when the theme flips
+    let color = getComputedStyle(canvas).color;
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // .ascii-art sets color: var(--ascii) — follows light/dark theme live
-      ctx.fillStyle = getComputedStyle(canvas).color;
+      ctx.fillStyle = color;
       for (const p of particles) ctx.fillText(p.ch, p.x, p.y);
     };
 
     // Opening gather uses its own timing; pointer interactions keep their spring physics.
     setup(!reduced);
     draw();
+    // redraw once Fira Code arrives — reduced-motion users get no later frames
+    document.fonts?.ready.then(draw);
 
-    const onResize = () => {
+    // refit when the box changes size; the observer also fires once on start,
+    // which the size check skips so the opening gather isn't reset
+    let size = `${box.clientWidth}x${box.clientHeight}`;
+    const resizeObserver = new ResizeObserver(() => {
+      const next = `${box.clientWidth}x${box.clientHeight}`;
+      if (next === size) return;
+      size = next;
       setup();
       draw();
-    };
-    window.addEventListener("resize", onResize);
+    });
+    resizeObserver.observe(box);
 
     // repaint in the new color when the theme flips while idle — the toggle
     // writes data-bs-theme, and so does the OS-following script in layout.tsx
-    const themeObserver = new MutationObserver(() =>
-      requestAnimationFrame(draw)
-    );
+    const themeObserver = new MutationObserver(() => {
+      color = getComputedStyle(canvas).color;
+      requestAnimationFrame(draw);
+    });
     themeObserver.observe(document.documentElement, {
       attributeFilter: ["data-bs-theme"],
     });
@@ -154,7 +162,7 @@ export default function AsciiArt() {
     if (reduced) {
       // static art only for reduced-motion users
       return () => {
-        window.removeEventListener("resize", onResize);
+        resizeObserver.disconnect();
         themeObserver.disconnect();
       };
     }
@@ -245,7 +253,7 @@ export default function AsciiArt() {
       canvas.removeEventListener("pointerleave", onLeave);
       canvas.removeEventListener("pointercancel", onLeave);
       canvas.removeEventListener("pointerup", onRelease);
-      window.removeEventListener("resize", onResize);
+      resizeObserver.disconnect();
       themeObserver.disconnect();
     };
   }, []);

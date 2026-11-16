@@ -9,7 +9,7 @@ export default function Footer() {
           <a className="btn btn-outline-dark" href="https://www.linkedin.com/in/junho-jeon-a08060252" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         <p className="small text-secondary mb-0">
-          &copy; {new Date().getFullYear()} Designed by Junho Jeon.
+          &copy; 2026 Designed by Junho Jeon.
         </p>
       </div>
     </footer>

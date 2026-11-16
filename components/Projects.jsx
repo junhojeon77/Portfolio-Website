@@ -4,11 +4,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
 import ProjectCarousel from "./ProjectCarousel";
-import projectsData from "../components/Projects.json";
+import data from "./Projects.json";
 import FadeInSection from "./hooks/FadeInSection";
 
 export default function Projects() {
-  const data = projectsData;
   const featured = data.filter((p) => p.featured);
   const rest = data.filter((p) => !p.featured);
 

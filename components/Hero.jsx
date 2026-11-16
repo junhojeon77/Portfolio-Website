@@ -10,8 +10,10 @@ import ResumeIntro from "@/components/ResumeIntro";
 export default function Hero() {
   return (
     <>
-      <Container className="d-flex flex-column justify-content-center align-items-center text-center">
-        <AsciiArt />
+      <Container className="hero d-flex flex-column align-items-center text-center">
+        <div className="hero-art">
+          <AsciiArt />
+        </div>
         <p className="text-secondary fs-8 mt-1">
           Hover or tap the portrait.
         </p>

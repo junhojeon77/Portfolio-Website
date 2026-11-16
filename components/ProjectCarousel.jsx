@@ -8,9 +8,7 @@ export default function ProjectCarousel({ items }) {
   return (
     <Carousel className="project-carousel">
       {items.map((item) => {
-        const demoLabel = item.website && new URL(item.website).hostname === "www.youtube.com"
-          ? "Watch demo"
-          : "Live demo";
+        const demoLabel = item.demoLabel || "Live demo";
 
         return (
           <Carousel.Item key={item.id}>

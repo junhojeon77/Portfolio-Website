@@ -5,9 +5,7 @@ import Image from "next/image";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
 
 export default function ProjectCard({ project, sizes = "(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" }) {
-  const demoLabel = project.website && new URL(project.website).hostname === "www.youtube.com"
-    ? "Watch demo"
-    : "Live demo";
+  const demoLabel = project.demoLabel || "Live demo";
   return (
     <Card
       className="h-100 shadow-sm hover-animate"
