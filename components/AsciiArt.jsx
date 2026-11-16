@@ -71,7 +71,7 @@ const RADIUS = 100;
 const FORCE = 150;
 const SPRING = 0.06;
 const DAMP = 0.86;
-const ENTRANCE_DAMP = 0.94; // looser damping while gathering = more bounce
+const GATHER_DURATION = 2000;
 
 export default function AsciiArt() {
   const canvasRef = useRef(null);
@@ -120,7 +120,7 @@ export default function AsciiArt() {
             x = hx + Math.cos(angle) * dist;
             y = hy + Math.sin(angle) * dist;
           }
-          particles.push({ ch: line[c], hx, hy, x, y, vx: 0, vy: 0 });
+          particles.push({ ch: line[c], hx, hy, x, y, initialX: x, initialY: y, vx: 0, vy: 0 });
         }
       });
     };
@@ -132,7 +132,7 @@ export default function AsciiArt() {
       for (const p of particles) ctx.fillText(p.ch, p.x, p.y);
     };
 
-    // entrance: start scattered and let the spring gather the portrait
+    // Opening gather uses its own timing; pointer interactions keep their spring physics.
     setup(!reduced);
     draw();
 
@@ -160,13 +160,27 @@ export default function AsciiArt() {
     }
 
     let wasActive = false;
-    let entrance = true; // bouncier damping until the gather settles
+    let entrance = true;
+    let gatherStarted = null;
     let frameId = null;
     const start = () => {
       if (frameId === null) frameId = requestAnimationFrame(tick);
     };
-    const tick = () => {
+    const tick = (timestamp) => {
       frameId = null;
+      if (entrance) {
+        if (gatherStarted === null) gatherStarted = timestamp;
+        const progress = Math.min(1, (timestamp - gatherStarted) / GATHER_DURATION);
+        const eased = progress * progress * (3 - 2 * progress);
+        for (const p of particles) {
+          p.x = p.initialX + (p.hx - p.initialX) * eased;
+          p.y = p.initialY + (p.hy - p.initialY) * eased;
+        }
+        draw();
+        entrance = progress < 1;
+        if (entrance) start();
+        return;
+      }
       let active = false;
       for (const p of particles) {
         const dx = p.x - mouse.x;
@@ -180,9 +194,8 @@ export default function AsciiArt() {
         }
         p.vx += (p.hx - p.x) * SPRING;
         p.vy += (p.hy - p.y) * SPRING;
-        const damp = entrance ? ENTRANCE_DAMP : DAMP;
-        p.vx *= damp;
-        p.vy *= damp;
+        p.vx *= DAMP;
+        p.vy *= DAMP;
         p.x += p.vx;
         p.y += p.vy;
         if (
@@ -198,13 +211,13 @@ export default function AsciiArt() {
         }
       }
       if (active || wasActive) draw(); // final draw snaps everything home
-      if (!active) entrance = false; // settled: back to normal repel feel
       wasActive = active;
       if (active) start(); // settled ⇒ stop burning frames until the pointer returns
     };
     start();
 
     const onMove = (e) => {
+      entrance = false; // respond immediately, even during the opening gather
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;

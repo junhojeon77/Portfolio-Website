@@ -39,7 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // The pre-paint script sets data-bs-theme before React hydrates this element.
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         {/* set the color mode before first paint: stored choice wins, OS is the
             fallback (and only keeps tracking while there's no stored choice) */}
