@@ -186,7 +186,7 @@ export default function AsciiArt() {
         }
         draw();
         entrance = progress < 1;
-        if (entrance) start();
+        start(); // after the gather, one physics frame picks up a cursor already on the art
         return;
       }
       let active = false;
@@ -225,7 +225,6 @@ export default function AsciiArt() {
     start();
 
     const onMove = (e) => {
-      entrance = false; // respond immediately, even during the opening gather
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
